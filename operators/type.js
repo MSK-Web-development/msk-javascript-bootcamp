@@ -2,6 +2,10 @@
 ? Type Operators
 
 typeof - Returns the type of a variable.
+typeof supports two forms of syntax:
+1. As an operator: typeof x
+2. As a function: typeof(x)
+In other words typeof operator works with both parentheses and without parentheses, giving the same result.
 
 instanceof - The instanceof operator tests to see if the prototype 
 property of a constructor appears anywhere in the prototype chain of 
@@ -14,6 +18,7 @@ console.log(typeof "abc"); // string
 console.log(typeof 123); // number
 console.log(typeof function () {}); // function
 console.log(typeof {}); // object
+console.log(typeof 10n); // "bigint"
 console.log(typeof null); // object
 console.log(typeof NaN); // number
 console.log(typeof undefined); // undefined
