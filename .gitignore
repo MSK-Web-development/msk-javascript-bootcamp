@@ -1,0 +1,7 @@
+# Root
+node_modules
+.DS_Store
+
+# Node modules
+react/projects/react-redux/node_modules
+languages/javascript/interview/problems/node_modules
