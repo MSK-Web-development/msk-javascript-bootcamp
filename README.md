@@ -1,4 +1,6 @@
-# [Watch the Bootcamp video](https://youtu.be/kmP4z1LJEKs)
+# [Watch the video](https://youtu.be/kmP4z1LJEKs)
+
+![Bootcamp](thumbnail.png)
 
 In this 6.5 hours long Javascript Bootcamp, I will train you with the most important javascript concepts so that you can start building websites and prepare for your upcoming front-end interviews.
 
@@ -9,4 +11,3 @@ The video has been tagged with chapters ( timestamps ) if you want to jump to di
 Subscribe to my [youtube channel](https://www.youtube.com/channel/UC1pwTpxZ3s1X_Vxb8K2uWYw) if you haven't already.
 
 -MSK
-
