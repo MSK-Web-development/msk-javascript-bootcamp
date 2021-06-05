@@ -11,3 +11,6 @@ The video has been tagged with chapters ( timestamps ) if you want to jump to di
 Subscribe to my [youtube channel](https://www.youtube.com/channel/UC1pwTpxZ3s1X_Vxb8K2uWYw) if you haven't already.
 
 -MSK
+
+## Note
+1. Install [Better comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments) VS Code extension to view colored comments.
