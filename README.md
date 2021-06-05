@@ -1,4 +1,4 @@
-# [Watch the video](https://youtu.be/kmP4z1LJEKs)
+## Click [here](https://youtu.be/kmP4z1LJEKs) to watch the Bootcamp video.
 
 ![Bootcamp](thumbnail.png)
 
