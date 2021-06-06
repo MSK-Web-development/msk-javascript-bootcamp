@@ -1,4 +1,6 @@
-# [Watch the Bootcamp video](https://youtu.be/kmP4z1LJEKs)
+## Click [here](https://youtu.be/kmP4z1LJEKs) to watch the Bootcamp video.
+
+![Bootcamp](thumbnail.png)
 
 In this 6.5 hours long Javascript Bootcamp, I will train you with the most important javascript concepts so that you can start building websites and prepare for your upcoming front-end interviews.
 
@@ -10,3 +12,5 @@ Subscribe to my [youtube channel](https://www.youtube.com/channel/UC1pwTpxZ3s1X_
 
 -MSK
 
+## Note
+1. Install [Better comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments) VS Code extension to view colored comments.
