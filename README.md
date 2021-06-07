@@ -12,5 +12,13 @@ Subscribe to my [youtube channel](https://www.youtube.com/channel/UC1pwTpxZ3s1X_
 
 -MSK
 
+---
+
 ## Note
 1. Install [Better comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments) VS Code extension to view colored comments.
+2. You can contribute to this repository by forking it and raising a PR.
+
+---
+
+© MSK Web development
+
