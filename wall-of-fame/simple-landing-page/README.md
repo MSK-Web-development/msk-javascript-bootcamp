@@ -8,7 +8,6 @@ Hi there, I'm Darshan R. This is the demo landing page built using HTML, CSS and
 ### OVERVIEW
 The project ‘Vihar Valley’ is a real estate related demo website made using HTML, CSS and JavaScript for clients to get to know about what the company is about and their services.
 
-<br>
 
 ### SPECIFICATION
 - On every page there will be a logo, navbar and footer for easy navigation of the pages.
@@ -18,7 +17,6 @@ The project ‘Vihar Valley’ is a real estate related demo website made using 
 - In the contact us page people can send feedback or queries if any.
 - Made responsive design for mobile device.
 
-<br>
 
 ### TOOLS AND TECHNOLOGY
 - HTML
@@ -27,19 +25,14 @@ The project ‘Vihar Valley’ is a real estate related demo website made using 
 - Google Fonts
 - Bootstrap
 - Github
-- Netlify
 
-<br>
 
 #### Demo Link:
 https://www.darshanr.me/real-estate-project/
 
-<br>
-
 #### Note:
 <i>This is just a demo website, all the information in website are just a dummy, not related to any company.<i>
 
-<br>
 <br>
 
 ## About
