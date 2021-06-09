@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#EF534F" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grandstander&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/png" href="./images/icons-192.png" />
+    <link rel="shortcut icon" sizes="192x192" href="./images/icons-192.png" />
+    <link rel="apple-touch-icon" href="./images/icons-192.png" />
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="icon" href="./favicon.ico" />
+    <title>Dino's Adventure</title>
+    <meta name="description" content="A pixel styled, platformer adventure game." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:title" content="Dino's Adventure" />
+    <meta
+      property="og:image"
+      content="https://akaspanion.github.io/platformer-game/images/ss-game.png"
+    />
+    <meta property="og:url" content="https://akaspanion.github.io/platformer-game/" />
+    <meta property="og:description" content="A pixel styled, platformer adventure game." />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Dino's Adventure" />
+    <meta
+      name="twitter:image"
+      content="https://akaspanion.github.io/platformer-game/images/ss-game.png"
+    />
+    <meta name="twitter:image:alt" content="Dino's Adventure platformer game" />
+    <meta name="twitter:description" content="A pixel styled, platformer adventure game." />
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("./sw.js").then(
+            function (registration) {
+              console.log(`SW: register successful with scope - ${registration.scope}`);
+            },
+            function (err) {
+              console.log(`SWS: registration failed with ${err}`);
+            }
+          );
+        });
+      }
+    </script>
+    <script>
+      document.addEventListener("contextmenu", (e) => e.preventDefault());
+      let tempPercent = 0;
+      let loadInterval = setInterval(() => {
+        if (tempPercent >= 100) return;
+
+        document.getElementById("progressValue").style.width = `${tempPercent}%`;
+        tempPercent += 10;
+      }, 200);
+    </script>
+  </head>
+  <body class="flex-item">
+    <div class="flex-item container">
+      <div class="controller controller-arrows">
+        <div id="leftBtn" class="flex-item controller-btn arrow-btn arrow-left"></div>
+        <div id="rightBtn" class="flex-item controller-btn arrow-btn arrow-right"></div>
+      </div>
+      <div class="persistent-controller">
+        <div id="pauseBtn"></div>
+        <div id="refreshBtn"></div>
+      </div>
+      <canvas></canvas>
+      <div class="controller controller-actions">
+        <div id="fireBtn" class="flex-item controller-btn">⚪️</div>
+        <div id="jumpBtn" class="flex-item controller-btn"></div>
+      </div>
+    </div>
+    <div id="startScreen" class="flex-item modal-screen">
+      <div class="heading-title">Dino's Adventure</div>
+      <div>
+        <div id="startTitle" class="game-over-title"></div>
+        <div id="scoreTitle" class="score-title"></div>
+      </div>
+      <div>
+        <div id="startBtn" class="flex-item">Play</div>
+        <div class="flex-item settings">
+          <div title="Music" id="musicBtn"></div>
+          <div title="Sound" id="soundBtn"></div>
+          <div title="Worlds" id="portalBtn"></div>
+          <div title="Help" id="helpBtn"></div>
+          <div title="Info" id="infoBtn"></div>
+        </div>
+      </div>
+      <div id="highScore" class="flex-item"></div>
+    </div>
+    <div id="loadingScreen" class="flex-item modal-screen">
+      <div id="progressContainer">
+        <div id="progressBar">
+          <div id="progressValue"></div>
+        </div>
+      </div>
+    </div>
+    <div id="helpScreen" class="flex-item modal-screen">
+      <div class="flex-item modal-container">
+        <div class="flex-item modal-header">
+          <div class="modal-title">Help</div>
+          <div id="helpCloseBtn"></div>
+        </div>
+        <div id="helpWrapper"></div>
+      </div>
+    </div>
+    <div id="infoScreen" class="flex-item modal-screen">
+      <div class="flex-item modal-container">
+        <div class="flex-item modal-header">
+          <div class="modal-title">Info</div>
+          <div id="infoCloseBtn"></div>
+        </div>
+        <div class="modal-content-wrapper">
+          <div class="flex-item modal-content">
+            <div class="modal-content-head">About</div>
+            <div class="flex-item modal-content-desc">
+              <p class="modal-content-desc-text">
+                Dino's Adventure is a platformer game made with pixel art style.<br />
+                Goal of this game is to help Dino collect coins and defeat enemies in his way.<br /><br />
+                Game is made entirly using <code>Vanilla JS</code>, <code>HTML5 Canvas</code>, and
+                <code>CSS</code>.
+                <br />
+                Game is also mobile responsive and can be installed on mobile/desktop as a PWA.<br /><br />
+                Game is open-source and its code can be found in the repository link below.
+              </p>
+            </div>
+          </div>
+          <div class="flex-item modal-content">
+            <div class="modal-content-head">Author</div>
+            <div class="flex-item modal-content-desc">
+              <p class="modal-content-desc-text">Ankit Kumar Pandit</p>
+              <div id="linksWrapper"></div>
+            </div>
+          </div>
+          <div class="flex-item modal-content">
+            <div class="modal-content-head">Repository</div>
+            <div class="flex-item modal-content-desc">
+              <a
+                class="modal-content-desc-text"
+                href="https://github.com/AKAspanion/platformer-game"
+                style="padding-bottom: 0px"
+                target="_blank"
+              >
+                https://github.com/AKAspanion/platformer-game</a
+              >
+              If you like this, consider giving it a ⭐️ on Github.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="portalScreen" class="flex-item modal-screen">
+      <div class="flex-item modal-container">
+        <div class="flex-item modal-header">
+          <div class="modal-title">World</div>
+          <div id="portalCloseBtn"></div>
+        </div>
+        <div id="portalsWrapper"></div>
+      </div>
+    </div>
+    <script src="./bundle.js"></script>
+    <script>
+      const highScore = localStorage.getItem("high_score") || "";
+      if (highScore) {
+        document.getElementById("highScore").innerHTML = `High Score: ${highScore}`;
+      }
+    </script>
+    <noscript>This app needs javascript.</noscript>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "short_name": "Dino's Adventure",
+  "name": "Dino's Adventure: Platformer game",
+  "description": "A pixel styled, platformer adventure game",
+  "display": "fullscreen",
+  "orientation": "any",
+  "start_url": "./index.html",
+  "theme_color": "#EF534F",
+  "background_color": "#292929",
+  "icons": [
+    {
+      "src": "./images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./images/icons-512.png",
+      "purpose": "maskable",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
