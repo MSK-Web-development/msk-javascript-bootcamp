@@ -1,0 +1,447 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+    Verdana, sans-serif;
+}
+
+:root {
+  --keyboard-gap: 32px;
+  --screen-height: 140px;
+  --button-size: calc(calc(var(--screen-height) / 2) - 19px);
+  --keys-container-width: min(calc(90vw), 1000px);
+  --keys-white-width: calc(calc(100% - 26px) / 15);
+  --keys-height: calc(var(--keys-container-width) * 0.25);
+  --keys-black-width: calc(var(--keys-white-width) * 0.5);
+  --keys-black-height: calc(var(--keys-height) * 0.65);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  padding: 32px;
+  width: 100vw;
+  background-color: white;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading__body {
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  color: white;
+  position: fixed;
+  background: rgb(16, 0, 0);
+}
+
+.keyboard__body {
+  margin: 24px;
+  border-radius: 3px;
+  background: linear-gradient(
+    #000000 0.2%,
+    #3a3739 0.6%,
+    #807e7f 0.8%,
+    #3a3739 2%,
+    rgb(31, 31, 31) 100%
+  );
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  padding: 24px 24px 0px 24px;
+  box-shadow: 0px 0px 2px 1px rgba(131, 131, 131, 0.75) inset;
+}
+
+.keyboard__container {
+  margin: 0px auto;
+  padding: 4px 8px 0px 8px;
+  background-color: #8a0b1a;
+  box-shadow: -2px 0px 5px -1px rgba(0, 0, 0, 0.75) inset,
+    4px 0px 5px -1px rgba(0, 0, 0, 0.75) inset, inset 0 8px 12px -5px rgba(0, 0, 0, 0.9);
+}
+
+.keyboard__keys {
+  position: relative;
+  width: var(--keys-container-width);
+}
+
+.keyboard__key__white__container {
+  gap: 2px;
+  display: flex;
+  flex-wrap: nowrap;
+  height: var(--keys-height);
+  width: var(--keys-container-width);
+}
+
+.keyboard__key__white {
+  position: relative;
+  border-radius: 2px;
+  background: #ffffff;
+  height: var(--keys-height);
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  width: calc(calc(100% - 26px) / 15);
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.88) inset, 5px 5px 11px -1px rgba(0, 0, 0, 0.79);
+}
+
+.keyboard__key__white:active,
+.keyboard__key__white.keyboard__key__white--pressed {
+  height: calc(var(--keys-height) * 1.02);
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.88) inset, 5px 5px 11px -1px rgba(0, 0, 0, 0.32),
+    0px 0px 11px -1px rgba(0, 0, 0, 0.23);
+}
+
+.keyboard__key__white:active:nth-child(14)::before,
+.keyboard__key__white:active:nth-child(13)::after,
+.keyboard__key__white:active:nth-child(13)::before,
+.keyboard__key__white:active:nth-child(12)::after,
+.keyboard__key__white:active:nth-child(12)::before,
+.keyboard__key__white:active:nth-child(11)::after,
+.keyboard__key__white:active:nth-child(10)::before,
+.keyboard__key__white:active:nth-child(9)::before,
+.keyboard__key__white:active:nth-child(9)::after,
+.keyboard__key__white:active:nth-child(8)::after,
+.keyboard__key__white:active:nth-child(7)::before,
+.keyboard__key__white:active:nth-child(6)::after,
+.keyboard__key__white:active:nth-child(6)::before,
+.keyboard__key__white:active:nth-child(5)::after,
+.keyboard__key__white:active:nth-child(5)::before,
+.keyboard__key__white:active:nth-child(4)::after,
+.keyboard__key__white:active:nth-child(3)::before,
+.keyboard__key__white:active:nth-child(2)::after,
+.keyboard__key__white:active:nth-child(2)::before,
+.keyboard__key__white:active:nth-child(1)::after,
+.keyboard__key__white.keyboard__key__white__14--pressed::before,
+.keyboard__key__white.keyboard__key__white__13--pressed::after,
+.keyboard__key__white.keyboard__key__white__13--pressed::before,
+.keyboard__key__white.keyboard__key__white__12--pressed::after,
+.keyboard__key__white.keyboard__key__white__12--pressed::before,
+.keyboard__key__white.keyboard__key__white__11--pressed::after,
+.keyboard__key__white.keyboard__key__white__10--pressed::before,
+.keyboard__key__white.keyboard__key__white__9--pressed::before,
+.keyboard__key__white.keyboard__key__white__9--pressed::after,
+.keyboard__key__white.keyboard__key__white__8--pressed::after,
+.keyboard__key__white.keyboard__key__white__7--pressed::before,
+.keyboard__key__white.keyboard__key__white__6--pressed::after,
+.keyboard__key__white.keyboard__key__white__6--pressed::before,
+.keyboard__key__white.keyboard__key__white__5--pressed::after,
+.keyboard__key__white.keyboard__key__white__5--pressed::before,
+.keyboard__key__white.keyboard__key__white__4--pressed::after,
+.keyboard__key__white.keyboard__key__white__3--pressed::before,
+.keyboard__key__white.keyboard__key__white__2--pressed::after,
+.keyboard__key__white.keyboard__key__white__2--pressed::before,
+.keyboard__key__white.keyboard__key__white__1--pressed::after {
+  top: 0;
+  content: '';
+  position: absolute;
+  background: #46080d;
+  height: calc(var(--keys-black-height) * 1.04);
+  box-shadow: 1px 0 1px #131518 inset, 2px 0 1px #14171a inset, -2px 0 0.75px #1a1c1f inset,
+    0 -2px 0.5px #1d1e1f inset 0 0 0.5px 1px #151514;
+}
+
+.keyboard__key__white:active:nth-child(14)::before,
+.keyboard__key__white:active:nth-child(13)::before,
+.keyboard__key__white:active:nth-child(12)::before,
+.keyboard__key__white:active:nth-child(10)::before,
+.keyboard__key__white:active:nth-child(9)::before,
+.keyboard__key__white:active:nth-child(7)::before,
+.keyboard__key__white:active:nth-child(6)::before,
+.keyboard__key__white:active:nth-child(5)::before,
+.keyboard__key__white:active:nth-child(3)::before,
+.keyboard__key__white:active:nth-child(2)::before,
+.keyboard__key__white.keyboard__key__white__14--pressed::before,
+.keyboard__key__white.keyboard__key__white__13--pressed::before,
+.keyboard__key__white.keyboard__key__white__12--pressed::before,
+.keyboard__key__white.keyboard__key__white__10--pressed::before,
+.keyboard__key__white.keyboard__key__white__9--pressed::before,
+.keyboard__key__white.keyboard__key__white__7--pressed::before,
+.keyboard__key__white.keyboard__key__white__6--pressed::before,
+.keyboard__key__white.keyboard__key__white__5--pressed::before,
+.keyboard__key__white.keyboard__key__white__3--pressed::before,
+.keyboard__key__white.keyboard__key__white__2--pressed::before {
+  left: 0;
+  border-bottom-right-radius: 2px;
+}
+
+.keyboard__key__white:active:nth-child(13)::after,
+.keyboard__key__white:active:nth-child(12)::after,
+.keyboard__key__white:active:nth-child(11)::after,
+.keyboard__key__white:active:nth-child(9)::after,
+.keyboard__key__white:active:nth-child(8)::after,
+.keyboard__key__white:active:nth-child(6)::after,
+.keyboard__key__white:active:nth-child(5)::after,
+.keyboard__key__white:active:nth-child(4)::after,
+.keyboard__key__white:active:nth-child(2)::after,
+.keyboard__key__white:active:nth-child(1)::after,
+.keyboard__key__white.keyboard__key__white__13--pressed::after,
+.keyboard__key__white.keyboard__key__white__12--pressed::after,
+.keyboard__key__white.keyboard__key__white__11--pressed::after,
+.keyboard__key__white.keyboard__key__white__9--pressed::after,
+.keyboard__key__white.keyboard__key__white__8--pressed::after,
+.keyboard__key__white.keyboard__key__white__6--pressed::after,
+.keyboard__key__white.keyboard__key__white__5--pressed::after,
+.keyboard__key__white.keyboard__key__white__4--pressed::after,
+.keyboard__key__white.keyboard__key__white__2--pressed::after,
+.keyboard__key__white.keyboard__key__white__1--pressed::after {
+  right: 0;
+  border-bottom-left-radius: 2px;
+}
+
+.keyboard__key__white:active:nth-child(14)::before,
+.keyboard__key__white:active:nth-child(13)::after,
+.keyboard__key__white:active:nth-child(12)::after,
+.keyboard__key__white:active:nth-child(9)::after,
+.keyboard__key__white:active:nth-child(9)::before,
+.keyboard__key__white:active:nth-child(8)::after,
+.keyboard__key__white:active:nth-child(7)::before,
+.keyboard__key__white:active:nth-child(3)::before,
+.keyboard__key__white:active:nth-child(2)::before,
+.keyboard__key__white:active:nth-child(2)::after,
+.keyboard__key__white.keyboard__key__white__14--pressed::before,
+.keyboard__key__white.keyboard__key__white__13--pressed::after,
+.keyboard__key__white.keyboard__key__white__12--pressed::after,
+.keyboard__key__white.keyboard__key__white__9--pressed::after,
+.keyboard__key__white.keyboard__key__white__9--pressed::before,
+.keyboard__key__white.keyboard__key__white__8--pressed::after,
+.keyboard__key__white.keyboard__key__white__7--pressed::before,
+.keyboard__key__white.keyboard__key__white__3--pressed::before,
+.keyboard__key__white.keyboard__key__white__2--pressed::before,
+.keyboard__key__white.keyboard__key__white__2--pressed::after {
+  width: calc(25% - 1px);
+}
+
+.keyboard__key__white:active:nth-child(13)::before,
+.keyboard__key__white:active:nth-child(12)::before,
+.keyboard__key__white:active:nth-child(11)::after,
+.keyboard__key__white:active:nth-child(10)::before,
+.keyboard__key__white:active:nth-child(6)::before,
+.keyboard__key__white:active:nth-child(6)::after,
+.keyboard__key__white:active:nth-child(5)::before,
+.keyboard__key__white:active:nth-child(5)::after,
+.keyboard__key__white:active:nth-child(4)::after,
+.keyboard__key__white:active:nth-child(1)::after,
+.keyboard__key__white.keyboard__key__white__13--pressed::before,
+.keyboard__key__white.keyboard__key__white__12--pressed::before,
+.keyboard__key__white.keyboard__key__white__11--pressed::after,
+.keyboard__key__white.keyboard__key__white__10--pressed::before,
+.keyboard__key__white.keyboard__key__white__6--pressed::before,
+.keyboard__key__white.keyboard__key__white__6--pressed::after,
+.keyboard__key__white.keyboard__key__white__5--pressed::before,
+.keyboard__key__white.keyboard__key__white__5--pressed::after,
+.keyboard__key__white.keyboard__key__white__4--pressed::after,
+.keyboard__key__white.keyboard__key__white__1--pressed::after {
+  width: calc(25%);
+}
+
+.keyboard__key__black__container {
+  top: 0;
+  gap: 2px;
+  display: flex;
+  flex-wrap: nowrap;
+  position: absolute;
+  pointer-events: none;
+  justify-content: space-evenly;
+  width: var(--keys-container-width);
+  padding: 0px calc(calc(var(--keys-black-width) * 0.5));
+}
+
+.keyboard__key__black {
+  position: relative;
+  border-radius: 6px;
+  border-radius: 2px;
+  pointer-events: all;
+  width: var(--keys-black-width);
+  height: var(--keys-black-height);
+}
+
+.keyboard__key__black.keyboard__key__black--real {
+  background: #141312;
+  background-image: linear-gradient(
+    #151514 1%,
+    #d0d1d3 2%,
+    #414141 3%,
+    #151514 50%,
+    #000000 90%,
+    #393939 91%
+  );
+  box-shadow: 1px 0 1px #131518 inset, 2px 0 1px #14171a inset, -2px 0 0.75px #1a1c1f inset,
+    0 -2px 0.5px #1d1e1f inset, 0 0 0.5px 1px #151514;
+}
+
+.keyboard__key__black.keyboard__key__black--real:active,
+.keyboard__key__black.keyboard__key__black--real.keyboard__key__black--pressed {
+  background-image: linear-gradient(
+    #151514 1%,
+    #6f6f6f 2%,
+    #b0b0b0 3%,
+    #383838 4%,
+    #151514 50%,
+    #000000 94%,
+    #323232 95%
+  );
+}
+
+.keyboard__screen {
+  display: flex;
+  position: relative;
+  margin-bottom: 24px;
+  border-radius: 2px;
+  width: calc(100% - 226px);
+  height: var(--screen-height);
+  background: rgb(70, 0, 0);
+  justify-content: space-between;
+  box-shadow: inset 1px 1px 2px rgb(0 0 0 / 60%), inset -1px -1px 2px rgb(0 0 0 / 40%);
+}
+.keyboard__time {
+  color: red;
+  font-size: 18px;
+  padding: 12px 24px;
+  text-transform: uppercase;
+}
+
+.keyboard__screen__overlay {
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background-size: auto 4px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.keyboard__list {
+  min-width: 50%;
+  padding: 8px 0px;
+  list-style: none;
+  overflow-y: scroll;
+  text-decoration: none;
+  height: var(--screen-height);
+}
+
+.keyboard__list__item {
+  color: red;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 2px 12px;
+  padding: 2px 8px;
+  margin-bottom: 12px;
+  text-decoration: none;
+  border: 2px solid transparent;
+}
+.keyboard__list__item:hover,
+.keyboard__list__item.keyboard__list__item--selected {
+  transition: 0.3s ease;
+  border: 2px solid red;
+  background: rgba(215, 0, 0, 0.2);
+}
+
+.keyboard__list__item.keyboard__title {
+  font-size: 24px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+.keyboard__list__item.keyboard__subtitle {
+  line-height: 20px;
+}
+
+.keyboard__controls {
+  display: flex;
+  gap: var(--keyboard-gap);
+}
+
+.keyboard__button__container {
+  flex-wrap: wrap;
+  gap: var(--keyboard-gap);
+  max-width: var(--screen-height);
+  height: calc(var(--screen-height) * 0.95);
+}
+
+.keyboard__button {
+  font-size: 12px;
+  color: #939393;
+  font-weight: bold;
+  user-select: none;
+  border-radius: 4px;
+  background: #101010;
+  width: var(--button-size);
+  height: var(--button-size);
+  background-image: linear-gradient(#2b2b2b, #101010 50%);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 0 1px 2px rgba(24, 24, 24, 0.9),
+    inset 0 -6px 5px rgba(0, 0, 0, 0.1), 0 6px 7px rgba(0, 0, 0, 0.3), 0 4px 1px rgba(0, 0, 0, 0.5);
+}
+.keyboard__button:active {
+  color: rgb(255, 0, 0);
+  transform: translate3d(0px, 2px, 0px);
+  background-image: linear-gradient(#101010 25%, #2b2b2b);
+
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.18), inset 0 0 1px 2px rgba(24, 24, 24, 0.9),
+    inset 0 -6px 5px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.3), 0 2px 1px rgba(0, 0, 0, 0.5);
+}
+
+.keyboard__button.keyboard__button--pressed {
+  color: rgb(255, 0, 0);
+}
+
+.keyboard__button > svg {
+  width: 28px;
+  height: 28px;
+}
+#saveBtn > svg,
+#clearBtn > svg,
+#refreshBtn > svg {
+  width: 22px;
+  height: 22px;
+}
+
+.loader {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 3px solid transparent;
+  border-top: 3px solid #db3434;
+  border-bottom: 3px solid #db3434;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  :root {
+    --keyboard-gap: 16px;
+    --screen-height: 100px;
+    --keys-container-width: min(calc(80vh), 800px);
+  }
+  .keyboard__body {
+    transform: rotate(90deg);
+  }
+  .loading__body {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(90deg);
+  }
+  svg {
+    transform: scale(0.75);
+  }
+}

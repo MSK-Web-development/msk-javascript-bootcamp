@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#460000" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="icon" href="./favicon.ico" />
+    <!-- Primary Meta Tags -->
+    <title>Keyboard 2108</title>
+    <meta name="title" content="Keyboard 2108" />
+    <meta name="description" content="A simple piano keyboard made using CSS." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://akaspanion.github.io/keyboard/" />
+    <meta property="og:title" content="Keyboard 2108" />
+    <meta property="og:description" content="A simple piano keyboard made using CSS." />
+    <meta
+      property="og:image"
+      content="https://github.com/AKAspanion/keyboard/blob/main/img/ss.png?raw=true"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://akaspanion.github.io/keyboard/" />
+    <meta property="twitter:title" content="Keyboard 2108" />
+    <meta property="twitter:description" content="A simple piano keyboard made using CSS." />
+    <meta
+      property="twitter:image"
+      content="https://github.com/AKAspanion/keyboard/blob/main/img/ss.png?raw=true"
+    />
+  </head>
+  <body class="flex-center">
+    <div class="keyboard__body">
+      <div class="keyboard__controls">
+        <div class="keyboard__screen">
+          <div class="keyboard__screen__overlay"></div>
+          <ul id="noteList" class="keyboard__list"></ul>
+          <div class="keyboard__time">
+            <div id="time"></div>
+          </div>
+        </div>
+        <div class="flex-center keyboard__button__container">
+          <div id="playBtn" class="keyboard__button flex-center">
+            <svg viewBox="0 0 24 24">
+              <path fill="currentColor" d="M8,5.14V19.14L19,12.14L8,5.14Z" />
+            </svg>
+          </div>
+          <div id="clearBtn" class="keyboard__button flex-center">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z"
+              />
+            </svg>
+          </div>
+          <div id="recordBtn" class="keyboard__button flex-center">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M19,12C19,15.86 15.86,19 12,19C8.14,19 5,15.86 5,12C5,8.14 8.14,5 12,5C15.86,5 19,8.14 19,12Z"
+              />
+            </svg>
+          </div>
+          <div id="saveBtn" class="keyboard__button flex-center">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M15,9H5V5H15M12,19A3,3 0 0,1 9,16A3,3 0 0,1 12,13A3,3 0 0,1 15,16A3,3 0 0,1 12,19M17,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V7L17,3Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="flex-center keyboard__button__container">
+          <div id="refreshBtn" class="keyboard__button flex-center">
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M17.65,6.35C16.2,4.9 14.21,4 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20C15.73,20 18.84,17.45 19.73,14H17.65C16.83,16.33 14.61,18 12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6C13.66,6 15.14,6.69 16.22,7.78L13,11H20V4L17.65,6.35Z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="keyboard__container">
+        <div class="keyboard__keys">
+          <div class="keyboard__key__white__container">
+            <div class="keyboard__key__white"></div>
+            <div class="keyboard__key__white"></div>
+            <div class="keyboard__key__white"></div>
+            <div class="keyboard__key__white"></div>
+            <div class="keyboard__key__white"></div>
+            <div class="keyboard__key__white"></div>
+            <div class="keyboard__key__white"></div>
+            <div class="keyboard__key__white"></div>
+            <div class="keyboard__key__white"></div>
+            <div class="keyboard__key__white"></div>
+            <div class="keyboard__key__white"></div>
+            <div class="keyboard__key__white"></div>
+            <div class="keyboard__key__white"></div>
+            <div class="keyboard__key__white"></div>
+            <div class="keyboard__key__white"></div>
+          </div>
+          <div class="keyboard__key__black__container">
+            <div class="keyboard__key__black keyboard__key__black--real"></div>
+            <div class="keyboard__key__black keyboard__key__black--real"></div>
+            <div class="keyboard__key__black"></div>
+            <div class="keyboard__key__black keyboard__key__black--real"></div>
+            <div class="keyboard__key__black keyboard__key__black--real"></div>
+            <div class="keyboard__key__black keyboard__key__black--real"></div>
+            <div class="keyboard__key__black"></div>
+            <div class="keyboard__key__black keyboard__key__black--real"></div>
+            <div class="keyboard__key__black keyboard__key__black--real"></div>
+            <div class="keyboard__key__black"></div>
+            <div class="keyboard__key__black keyboard__key__black--real"></div>
+            <div class="keyboard__key__black keyboard__key__black--real"></div>
+            <div class="keyboard__key__black keyboard__key__black--real"></div>
+            <div class="keyboard__key__black"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="loader" class="loading__body flex-center">
+      <div class="loader"></div>
+    </div>
+    <script src="./bundle.js"></script>
+  </body>
+</html>
