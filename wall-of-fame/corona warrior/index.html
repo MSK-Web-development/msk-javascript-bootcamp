@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>corona warrior</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+        #mycanvas{
+            background: url("img/back2.jpg");
+            border: 5px solid black;
+            
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+            h1{
+                font-family: 'Permanent Marker', cursive;
+                text-align: center;
+                font-size: 54PX;
+                color: rgb(44, 2, 116);
+                text-shadow: 3px 3px #89218d;
+            }
+        
+    </style>
+</head>
+<body>
+  <audio src="img/lose.mp3" id="sound"></audio>
+  <audio src="img/endgame.mp3" id="won"></audio>
+    <h1>CORONA WARRIOR</h1>
+    <canvas id="mycanvas"></canvas>
+    <h1>#STAY HOME #STAY SAFE</h1>
+    <script src="game.js"></script>
+</body>
+</html>
