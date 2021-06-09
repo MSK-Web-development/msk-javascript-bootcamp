@@ -1,0 +1,284 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+/* Applying style to the header i.e., nav bar */
+.nav-head {
+  background-color: #ffffff;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Montserrat", sans-serif;
+  height: 170px;
+  width: 100%;
+  text-align: center;
+}
+
+.logo-and-hamburger-container {
+  margin-bottom: 50px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.logo {
+  height: 90px;
+  width: 120px;
+}
+
+.logo-container {
+  position: relative;
+}
+
+.logo-head {
+  overflow: hidden;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 4px;
+  white-space: nowrap;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  position: absolute;
+  color: #0c1829;
+}
+
+.hamburgerIcon {
+  display: none;
+}
+
+.closeNavIcon {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .nav-head {
+    height: 115px;
+  }
+
+  .logo-and-hamburger-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .hamburgerIcon {
+    display: block;
+    font-size: 1.5em;
+    position: relative;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #0c1829;
+  }
+}
+
+.nav-item {
+  list-style: none;
+  text-align: center;
+  position: relative;
+  bottom: 30px;
+  z-index: 1;
+}
+
+.nav-item li {
+  display: inline;
+  padding-bottom: 10px;
+  padding-left: 25px;
+  padding-right: 25px;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #0d4444;
+  letter-spacing: 2px;
+}
+
+.nav-item li:hover {
+  border-bottom: rgb(68, 112, 98) 2px solid;
+  color: #035858;
+}
+
+.nav-link,
+.logo-link {
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(12, 24, 41, 0.98);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+
+  .nav-open {
+    width: 70%;
+  }
+
+  .nav-item {
+    position: relative;
+    top: 4em;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  .nav-item li {
+    display: block;
+    padding: 5px;
+    transition: 0.3s;
+  }
+
+  .nav-item li:hover {
+    border-bottom: none;
+    color: #035858;
+  }
+
+  .closeNavIcon {
+    display: block;
+    font-size: 1.5em;
+    float: left;
+    position: relative;
+    top: 1.5em;
+    left: 1.5em;
+    cursor: pointer;
+    color: #0d4444;
+  }
+
+  .closeNavIcon:hover {
+    color: #035858;
+  }
+}
+
+/* Applying style to the main body content */
+.main-body {
+  background-image: url(https://ak.picdn.net/shutterstock/videos/3614222/thumb/3.jpg) !important;
+  background-repeat: no-repeat;
+  background-size: 100% 700px;
+  height: 800px;
+  width: 100%;
+}
+
+.main-body-section {
+  padding-top: 250px;
+  text-align: center;
+}
+
+.sub-head {
+  font-family: "Kufam", cursive;
+  color: #082c2c;
+  font-size: 50px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .main-body-section {
+    position: relative;
+    bottom: 90px;
+  }
+
+  .sub-head {
+    font-size: 40px;
+  }
+}
+
+.main-body-text {
+  font-family: sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  color: #516661;
+  line-height: 30px;
+}
+
+.about {
+  text-align: center;
+  position: relative;
+  bottom: 50px;
+}
+
+.about-text {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+}
+.btn {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.btn-enq {
+  font-family: "PT Sans", sans-serif;
+  background-color: #082c2c;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  width: 200px;
+  height: 50px;
+  border: none;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 1px;
+}
+.btn-enq:hover {
+  background-color: #144d4d;
+}
+
+footer {
+  background-color: #082c2c;
+}
+
+.footer-block {
+  min-height: 300px;
+}
+
+.info-block > div {
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 25px;
+  padding-top: 20px;
+}
+
+.info-block > div > h4 {
+  color: #68b891;
+}
+
+.social-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.social-link:hover {
+  color: #035858;
+}
+
+.credits {
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  color: #035858;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.credits a {
+  text-decoration: none;
+  color: #006161;
+}
+
+.credits a:hover {
+  color: #048888;
+}

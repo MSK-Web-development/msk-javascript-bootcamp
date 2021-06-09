@@ -1,0 +1,27 @@
+body {
+  background-color: #f1faf5;
+}
+.gallery {
+  background-color: #082c2c;
+  align-items: flex-start;
+  margin: 10px;
+  margin-bottom: 40px;
+}
+
+.gallery-item {
+  padding: 15px;
+}
+
+.gallery-item > img {
+  width: 100%;
+  height: 200px;
+  object-fit: fill;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+.pic1 {
+  height: 100% !important;
+}

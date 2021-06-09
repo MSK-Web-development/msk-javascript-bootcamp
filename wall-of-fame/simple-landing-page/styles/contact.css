@@ -1,0 +1,25 @@
+body {
+  background-color: #f1faf5;
+}
+
+input[type="text"],
+select,
+textarea {
+  padding: 12px;
+  border: 1px solid #f1faf5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  display: block;
+}
+
+.contact-container {
+  font-family: sans-serif;
+  border-radius: 5px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  color: #4c7074;
+}
