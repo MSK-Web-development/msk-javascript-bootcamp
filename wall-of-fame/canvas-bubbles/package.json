@@ -1,0 +1,29 @@
+{
+  "name": "canvas-bubbles",
+  "version": "1.0.0",
+  "description": "Bubble animation on HTML5 canvas, inspitred by windows bubble screensaver",
+  "main": "index.html",
+  "scripts": {
+    "demo": "node server.js",
+    "predemo": "npm install",
+    "build": "copyfiles index.html js/* dist",
+    "predeploy": "npm i && npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "express": "^4.17.1",
+    "gh-pages": "^3.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AKAspanion/canvas-bubbles.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AKAspanion/canvas-bubbles/issues"
+  },
+  "homepage": "https://github.com/AKAspanion/canvas-bubbles#readme"
+}
