@@ -97,8 +97,7 @@ window.addEventListener("load", function () {
   let paused = false;
   let areaNumber = 1;
   let worldChanged = false;
-  const totalAreaNumber = 6;
-  let gameRestartTimeout = null;
+  const totalAreaNumber = 5;
 
   toggleSoundBtn(getData("mute_sounds"));
   toggleMusicBtn(getData("mute_music"));
@@ -121,7 +120,7 @@ window.addEventListener("load", function () {
       document.getElementById("highScore").innerHTML = `High Score: ${highScore}`;
     }
 
-    gameRestartTimeout = setTimeout(() => {
+    setTimeout(() => {
       toggleStartScreen(true);
     }, 1500);
   });
@@ -220,7 +219,7 @@ window.addEventListener("load", function () {
           areaNumber++;
         }
 
-        if (areaNumber > totalAreaNumber) {
+        if (areaNumber >= totalAreaNumber) {
           areaNumber = 1;
         }
         if (areaNumber <= 0) {
@@ -275,7 +274,7 @@ window.addEventListener("load", function () {
 
     screen.drawMap(map);
     screen.drawMapObjects(objects);
-    screen.drawArea(game.world.portals);
+    // screen.drawArea(game.world.portals);
     // screen.drawArea(game.world.deathAreas);
     // screen.drawArea(game.world.enemies.items);
 
@@ -414,7 +413,7 @@ window.addEventListener("load", function () {
     rightMouse.actions.clear();
   };
 
-  const loadWorld = (id = 9, areaNum = 6, left = 40, top = 100, refresh = false) => {
+  const loadWorld = (id = 1, areaNum = 1, left = 40, top = 100, refresh = false) => {
     clearMouse();
     startTitle.textContent = "";
     scoreTitle.textContent = "";
@@ -481,8 +480,6 @@ window.addEventListener("load", function () {
 
   refreshBtn.onclick = () => {
     areaNumber = 1;
-    clearTimeout(gameRestartTimeout);
-
     startBtn.click();
   };
 
@@ -534,5 +531,5 @@ window.addEventListener("load", function () {
     }
   });
 
-  startBtn.click();
+  // startBtn.click();
 });

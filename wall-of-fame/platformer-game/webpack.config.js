@@ -40,7 +40,7 @@ module.exports = {
     historyApiFallback: true,
     inline: true,
     host: "localhost",
-    port: 8012,
+    port: 2108,
     open: true,
     overlay: {
       warnings: true,
