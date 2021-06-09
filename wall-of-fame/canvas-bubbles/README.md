@@ -10,7 +10,7 @@ A simple canvas animation inspired by Windows bubble screensaver.
 See it live here [https://akaspanion.github.io/canvas-bubbles/](https://akaspanion.github.io/canvas-bubbles/)
 
 ### Locally
-Just clone this repo and
+Just clone this [repo](https://github.com/akaspanion/canvas-bubbles) and
 ```bash
 npm run demo
 ```
