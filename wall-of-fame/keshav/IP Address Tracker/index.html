@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>IP Address Tracker | Frontend Mentor</title>
+
+  <!-- GOOGLE FONTS STYLESHEET  -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- MAP CSS STYLESHEET  -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+
+  <!-- Stylesheet for the page -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <div class="container column">
+    <h1 class="heading">IP Address Tracker</h1>
+
+    <div class="form">
+      <input type="text" name="track" id="track" class="track" placeholder="Search for any IP Address or Domain" required>
+      <button type="submit" id="submit"><img src="./images/icon-arrow.svg" alt="Submit button icon"></button>
+    </div>
+
+    <div class="display column">
+      <div class="address column">
+        <div class="type">ip address</div>
+        <div class="text">192.212.174.101</div>
+      </div>
+      <div class="location column">
+        <div class="type">location</div>
+        <div class="text"> <span class="city">Brooklyn</span>, <span class="country">NY</span></div>
+      </div>
+      <div class="time column">
+        <div class="type">Timezone</div>
+        <div class="text">UTC <span class="timezone">-05:00</span></div>
+      </div>
+      <div class="isp column">
+        <div class="type">isp</div>
+        <div class="text">SpaceX Starlink</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="loader"></div>
+
+  <div id="mapid"></div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="github.com/keshavarora2000">Keshav Arora</a>.
+  </div>
+
+  <!-- MAP JAVASCRIPT FILE -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+
+  <!-- JAVASCRIPT FILE  -->
+  <script src="index.js"></script>
+</body>
+</html>
+

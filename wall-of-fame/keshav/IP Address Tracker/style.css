@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  background-image: url('./images/pattern-bg.png');
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#mapid {
+  position: absolute;
+  top: 250px;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  /* background-color: white; */
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    display: block;
+    background: #fff url('./images/Spinner.gif') no-repeat center;
+}
+
+.heading {
+  padding: 2rem 0;
+}
+
+.form {
+  width: 80%;
+  height: 40px;
+  display: flex;
+}
+
+input {
+  width: 80%;
+  height: 50px;
+  border: 0;
+  font-family: 'Rubik', sans-serif;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 0.5rem 1rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  width: 18%;
+  height: 50px;
+  border: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: black;
+}
+
+button:hover, button:focus {
+  background-color:hsl(228, 45%, 44%);
+}
+
+.display {
+  color: black;
+  width: 80%;
+  margin-top: 2rem;
+  padding: 1rem 0.5rem;
+  margin-bottom: 80%;
+  font-weight: 700;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.display > div {
+  padding: 0.5rem 0;
+}
+
+.type {
+  color: hsl(0, 0%, 59%);
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.text {
+  color: hsl(0, 0%, 17%);
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 18px;
+  }
+  
+  .form {
+    width: 50%;
+  }
+
+  .display {
+    flex-direction: row;
+    font-weight: 500;
+    margin-bottom: 26%;
+  }
+
+  .display > div {
+    flex: 1;
+    padding: 1.5rem 1rem;
+    align-items: flex-start;
+    border-right: 1px solid #adadad;
+  }
+
+  .display > div:last-child {
+    border: 0;
+  }
+  .type {
+    font-size: 0.8rem;
+  }
+  .text {
+    font-size: 1.4rem;
+  }
+}
+
+#mapid { height: 480px; }
+
+.attribution { font-size: 11px; text-align: center; margin: 1rem 0;}
+.attribution a { color: hsl(228, 45%, 44%); }
