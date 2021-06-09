@@ -1,0 +1,433 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  user-select: none;
+  --small-btn-size: 56px;
+  background-color: #292929;
+}
+code {
+  font-size: 90%;
+  padding: 0px 4px;
+  padding-top: 3px;
+  border-radius: 3px;
+  background: #e4e4e4;
+  font-family: "Grandstander", monospace;
+}
+.flex-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  z-index: 5;
+  margin: 0px auto;
+  position: relative;
+  background-color: #292929;
+  font-family: "Grandstander", monospace;
+}
+canvas {
+  border: 1px solid #292929;
+}
+
+.controller,
+.persistent-controller {
+  visibility: hidden;
+}
+
+.controller-actions,
+.controller-arrows {
+  z-index: 5;
+  top: -100px;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  align-items: center;
+}
+
+.controller-arrows {
+  bottom: 0;
+  width: 112px;
+  justify-content: space-between;
+}
+.controller-actions {
+  align-items: flex-end;
+}
+.controller-btn {
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  color: #cccccc;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+
+.controller-actions {
+  right: 4px;
+  top: calc(100% - 80px);
+}
+.controller-arrows {
+  left: 4px;
+  top: calc(100% - 68px);
+}
+
+#startBtn {
+  width: 100px;
+  height: 48px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0px auto;
+  padding: 12px 8px;
+  border-radius: 6px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #ef5350;
+  background: url(images/large_btn.webp) center center / 120px 52px no-repeat;
+}
+
+.btn,
+#infoBtn,
+#helpBtn,
+#musicBtn,
+#soundBtn,
+#pauseBtn,
+#portalBtn,
+#refreshBtn,
+#infoCloseBtn,
+#helpCloseBtn,
+#portalCloseBtn {
+  z-index: 5;
+  cursor: pointer;
+  width: var(--small-btn-size);
+  height: var(--small-btn-size);
+}
+
+#pauseBtn,
+#refreshBtn {
+  left: 50%;
+  bottom: 0px;
+  position: absolute;
+}
+
+#portalCloseBtn,
+#helpCloseBtn,
+#infoCloseBtn {
+  background: url(images/close_btn.webp) center center / var(--small-btn-size) no-repeat;
+}
+
+#helpBtn {
+  background: url(images/help_btn.webp) center center / var(--small-btn-size) no-repeat;
+}
+
+#infoBtn {
+  background: url(images/info_btn.webp) center center / var(--small-btn-size) no-repeat;
+}
+
+#soundBtn {
+  background: url(images/sound_btn.webp) center center / var(--small-btn-size) no-repeat;
+}
+
+#portalBtn {
+  background: url(images/portal_btn.webp) center center / var(--small-btn-size) no-repeat;
+}
+
+#musicBtn {
+  background: url(images/music_btn.webp) center center / var(--small-btn-size) no-repeat;
+}
+
+#pauseBtn {
+  transform: translate(calc(-50% - 28px), -6px);
+  background: url(images/pause_btn.webp) center center / var(--small-btn-size) no-repeat;
+}
+
+#refreshBtn {
+  transform: translate(calc(-50% + 28px), -6px);
+  background: url(images/refresh_btn.webp) center center / var(--small-btn-size) no-repeat;
+}
+
+.left-btn,
+#leftBtn {
+  background: url(images/left_btn.webp) center center / var(--small-btn-size) no-repeat;
+}
+.left-key-btn {
+  background: url(images/key_left.webp) center center / var(--small-btn-size) no-repeat;
+}
+
+.right-btn,
+#rightBtn {
+  background: url(images/right_btn.webp) center center / var(--small-btn-size) no-repeat;
+}
+.right-key-btn {
+  background: url(images/key_right.webp) center center / var(--small-btn-size) no-repeat;
+}
+
+.fire-btn,
+#fireBtn {
+  background: url(images/small_btn.webp) center center / var(--small-btn-size) no-repeat;
+}
+.fire-btn {
+  font-size: 24px;
+}
+.fire-key-btn {
+  width: 120px;
+  background: url(images/key_shift.webp) center center / 120px no-repeat;
+}
+
+#jumpBtn {
+  width: 72px;
+  height: 72px;
+  font-size: 34px;
+  background: url(images/up_btn.webp) center center / 75px no-repeat;
+}
+
+.jump-btn {
+  background: url(images/up_btn.webp) center center / var(--small-btn-size) no-repeat;
+}
+.jump-key-btn {
+  background: url(images/key_up.webp) center center / var(--small-btn-size) no-repeat;
+}
+
+.social-btn {
+  --social-btn-size: 24px;
+  width: var(--social-btn-size);
+  height: var(--social-btn-size);
+}
+.gh-btn {
+  background: url(images/github.svg) center center / var(--social-btn-size) no-repeat;
+}
+.li-btn {
+  background: url(images/linkedin.svg) center center / var(--social-btn-size) no-repeat;
+}
+.in-btn {
+  background: url(images/instagram.svg) center center / var(--social-btn-size) no-repeat;
+}
+.fb-btn {
+  background: url(images/facebook.svg) center center / var(--social-btn-size) no-repeat;
+}
+
+.btn-tut {
+  margin: 0px 8px;
+}
+.key-btn {
+  padding: 2px 0px;
+}
+
+.settings {
+  width: 320px;
+  justify-content: space-evenly;
+  padding: min(48px, 4vh) 8px 8px 8px;
+}
+
+.cancel-cross::after {
+  content: "";
+  height: 4px;
+  width: 40px;
+  position: absolute;
+  border-radius: 4px;
+  background: white;
+  transform: rotate(-45deg) translate(-12px, 24px);
+}
+
+.heading-title,
+.score-title {
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+.heading-title {
+  padding: min(48px, 3vh);
+  font-size: max(36px, 6vh);
+  padding-bottom: 0px;
+}
+.game-over-title {
+  color: red;
+  font-size: 28px;
+  padding: 0px min(40px, 2vh);
+}
+.score-title {
+  font-size: 24px;
+  padding-top: min(16px, 1vh);
+}
+
+.modal-screen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  visibility: hidden;
+  text-transform: uppercase;
+  background-color: #292929;
+  font-family: "Grandstander", monospace;
+}
+
+#startScreen {
+  z-index: 8;
+  visibility: visible;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: "Grandstander", monospace;
+}
+
+#loadingScreen {
+  z-index: 10;
+  color: white;
+  font-size: 56px;
+  visibility: visible;
+  text-transform: uppercase;
+  font-family: "Grandstander", monospace;
+}
+
+#helpScreen,
+#infoScreen,
+#portalScreen {
+  z-index: 12;
+  background-color: transparent;
+}
+
+.modal-container {
+  --modal-padding: min(36px, 10vw);
+  width: 80%;
+  color: #ef534f;
+  border-radius: 16px;
+  flex-direction: column;
+  background-color: white;
+  justify-content: flex-start;
+  padding: var(--modal-padding);
+  height: calc(80% - var(--modal-padding));
+}
+.modal-header {
+  width: 100%;
+  padding-bottom: 16px;
+  justify-content: space-between;
+}
+.modal-title {
+  font-size: 52px;
+  text-align: center;
+}
+.modal-content-wrapper {
+  width: 100%;
+  overflow-y: auto;
+  padding-top: 16px;
+}
+.modal-content {
+  width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.modal-content-head {
+  font-size: 24px;
+  padding: 16px 0px;
+  width: min(180px, 30%);
+}
+.modal-content-desc {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.modal-content-desc-text {
+  color: #ef534f;
+  padding: 19px 0px;
+  text-decoration: none;
+}
+
+#progressContainer {
+  width: max(200px, 10vw);
+}
+#progressBar {
+  width: 100%;
+  height: 10px;
+  margin-top: 12px;
+  background: #000000;
+  transition: width 0.3s ease;
+}
+#progressValue {
+  width: 0%;
+  height: 10px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+#highScore {
+  color: white;
+  font-size: 24px;
+  align-items: flex-end;
+  height: min(100px, 15vh);
+}
+.portal-item-wrapper {
+  gap: 0 48px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.portal-item {
+  width: 100%;
+  height: 240px;
+  cursor: pointer;
+  overflow: hidden;
+  object-fit: cover;
+  position: relative;
+  margin-bottom: 32px;
+  border-radius: 16px;
+}
+
+.portal-img {
+  margin-bottom: 0px;
+}
+
+.portal-title,
+.portal-overlay {
+  top: 55%;
+  left: 50%;
+  color: white;
+  position: absolute;
+  text-align: center;
+  border-radius: 16px;
+  pointer-events: none;
+  font-size: max(48px, 6vh);
+  transform: translate(-50%, -50%);
+}
+
+.portal-overlay {
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  transition: background-color 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.portal-item:hover .portal-overlay {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    transform: rotate(90deg);
+    justify-content: space-evenly;
+  }
+  .modal-screen {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(90deg);
+  }
+  .modal-container {
+    width: 100%;
+    height: calc(100% - var(--modal-padding));
+  }
+  #highScore {
+    height: min(100px, 7vh);
+  }
+  .settings {
+    padding: min(48px, 2vh) 8px 8px 8px;
+  }
+}

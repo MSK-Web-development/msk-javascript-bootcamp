@@ -1,0 +1,30 @@
+{
+  "name": "platformer-game",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "serve": "webpack serve",
+    "dep": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm install && npm run build",
+    "dev": "webpack-dashboard -m -c green -t react -- webpack serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": "",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^7.0.0",
+    "eslint": "^7.19.0",
+    "eslint-webpack-plugin": "^2.4.3",
+    "gh-pages": "^3.1.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^5.20.1",
+    "webpack-cli": "^4.5.0",
+    "webpack-dashboard": "^3.3.1",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
