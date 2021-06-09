@@ -9,6 +9,10 @@ A Simple Simon Game Developed with HTML,CSS and JAVASCRIPT
 2) Added Multi-Color to Keys for Player Support
 
 
+![Simon - Google Chrome 09-06-2021 20_25_37](https://user-images.githubusercontent.com/65807708/121381266-31d63800-c963-11eb-9dff-ddffc2fc8839.png)
+
+
+
 Demo :- https://codeaholic-shub.github.io/Simon-Game/
 
 
