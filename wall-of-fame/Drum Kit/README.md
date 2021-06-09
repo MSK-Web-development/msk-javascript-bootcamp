@@ -8,6 +8,12 @@
 
 
 <h2> Project Details - Drum Kit </h2>
+
+![Drum Kit - Google Chrome 09-06-2021 09_28_28](https://user-images.githubusercontent.com/65807708/121298319-4a1d6700-c911-11eb-8ee0-cbd91eed353f.png)
+
+
+
+
 <p> Implemented HTML,CSS,JAVASCRIPT </p>
 <p> Added Sounds Features for Differnt Beats of Drum </p>
 <p> Vanilla JS Project </p>
