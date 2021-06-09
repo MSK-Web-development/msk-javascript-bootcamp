@@ -1,0 +1,318 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+:root {
+  --dark-color: #f4f4f4;
+  --primary-color: #93cb62;
+  
+  --white-color: #120020;
+  --light-color: rgb(11, 0, 22);
+  --solid-light-color: #444;
+  --shade-color: #323232;
+  
+  --circle-color: #87cee3;
+}
+
+.light-theme {
+  --dark-color: #120020;
+  --white-color: #fff;
+  --primary-color: #93cb62;
+
+  --light-color: #f4f4f4;
+  --solid-light-color: #ccc;
+  --shade-color: #bbb;
+
+  --circle-color: #008000;
+}
+
+body {
+  font-family: monospace;
+  width: 100%;
+  height: 100vh;
+  background: var(--white-color);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* body,
+header, */
+.game-container,
+.game-over,
+.result {
+  transition: all 0.5s ease-in-out;
+}
+
+header {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+
+  position: relative;
+  z-index: 10;
+}
+
+.navbar {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#theme-check {
+  border: none;
+  background-color: #ccc;
+  padding: 0.4rem 0.7rem;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.choose-game-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.select-game-text {
+  color: var(--dark-color);
+}
+
+.choose-game-container select {
+  border: none;
+  padding: 5px 20px;
+  margin-left: 10px;
+  background: #f4f4f4;
+  outline: none;
+}
+
+.game-container {
+  width: 100%;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white-color);
+}
+
+@media (max-height: 650px) {
+  .choose-game-container {
+    margin-top: 1rem;
+  }
+  .game-container {
+    margin-top: 1.5rem;
+  }
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+
+  position: relative;
+}
+
+.box {
+  border: 2px solid var(--primary-color);
+  font-size: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.box-0,
+.box-1,
+.box-2 {
+  border-top: none;
+}
+.box-0,
+.box-3,
+.box-6 {
+  border-left: none;
+}
+.box-6,
+.box-7,
+.box-8 {
+  border-bottom: none;
+}
+.box-2,
+.box-5,
+.box-8 {
+  border-right: none;
+}
+
+.game-over {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  transition: display 0.5s ease-in;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  display: none;
+}
+
+.game-over .result {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  padding: 0.7rem 2rem;
+  border-radius: 3px;
+}
+.game-over .result .won {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.game-over button {
+  margin-top: 1.5rem;
+  padding: 0.7rem 2rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background 0.3s ease-in;
+}
+.game-over button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Players Choice */
+.X::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  background: var(--dark-color);
+  border: 5px solid var(--dark-color);
+  transform: rotate(-45deg);
+  animation: x-forward 0.2s linear;
+}
+@keyframes x-forward {
+  0% {
+    transform: rotate(-45deg) scale(0);
+  }
+  25% {
+    transform: rotate(-45deg) scale(0.5);
+  }
+  60% {
+    transform: rotate(-45deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(-45deg) scale(1);
+  }
+}
+.X::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  background: var(--dark-color);
+  border: 5px solid var(--dark-color);
+  transform: rotate(45deg);
+  animation: x-backward 0.2s linear;
+}
+@keyframes x-backward {
+  0% {
+    transform: rotate(45deg) scale(0);
+  }
+  25% {
+    transform: rotate(45deg) scale(0.5);
+  }
+  60% {
+    transform: rotate(45deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+.O::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 10px solid var(--circle-color);
+  border-radius: 50%;
+  animation: bubble 0.2s linear;
+}
+
+@keyframes bubble {
+  0% {
+    transform: scale(0.1);
+  }
+  25% {
+    transform: scale(0.5);
+  }
+  60% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.playerX-light::before,
+.playerX-light::after {
+  background-color: var(--shade-color);
+  border-color: var(--shade-color);
+}
+
+.playerO-light::before,
+.playerO-light::after {
+  border-color: var(--shade-color);
+}
+
+/* Player Won highlight matches */
+.playerX-won::before,
+.playerX-won::after {
+  animation: highlightX 2s forwards linear;
+}
+
+@keyframes highlightX {
+  25% {
+    border-color: var(--solid-light-color);
+    background-color: var(--solid-light-color);
+  }
+  50% {
+    border-color: var(--dark-color);
+    background-color: var(--dark-color);
+  }
+  75% {
+    border-color: var(--solid-light-color);
+    background-color: var(--solid-light-color);
+  }
+  100% {
+    border-color: var(--dark-color);
+    background-color: var(--dark-color);
+  }
+}
+
+.playerO-won::before {
+  animation: highlightO 2s forwards linear;
+}
+
+@keyframes highlightO {
+  25% {
+    border-color: var(--solid-light-color);
+    /* background-color: var(--solid-light-color); */
+  }
+  50% {
+    border-color: var(--circle-color);
+  }
+  75% {
+    border-color: var(--solid-light-color);
+    /* background-color: var(--solid-light-color); */
+  }
+  100% {
+    border-color: var(--circle-color);
+  }
+}
