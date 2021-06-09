@@ -1,0 +1,59 @@
+body {
+  background-color: #f1faf5;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.flex-container > div {
+  background-color: #ffffff;
+  margin: 10px;
+  border: 1px solid black;
+  height: auto;
+  padding: 10px;
+  box-shadow: 10px 10px 1px #082c2c8a;
+  transition: 0.5s;
+}
+
+.term-condition span {
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #8286869c;
+  text-align: center;
+  display: block;
+}
+
+.plan-name {
+  font-family: "PT Sans", sans-serif;
+  text-align: center;
+  font-weight: bold;
+  font-size: 35px;
+}
+.gold {
+  color: gold;
+}
+.platinum {
+  color: #999895;
+}
+.flex-container div ul {
+  line-height: 30px;
+  font-size: 17px;
+  color: #7c8e8b;
+}
+
+.plan-price {
+  color: #6ab992;
+  text-align: center;
+}
+
+.btn {
+  margin-bottom: 0px;
+}
+
+.term-condition {
+  margin-bottom: 100px;
+}

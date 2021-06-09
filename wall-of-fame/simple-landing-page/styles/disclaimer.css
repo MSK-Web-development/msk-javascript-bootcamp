@@ -1,0 +1,29 @@
+.disclaimer-container {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  margin-bottom: 50px;
+}
+
+.disclaimer-container > div {
+  border: 1px solid #1e1b22;
+  box-shadow: 10px 10px 1px #082c2c8a;
+}
+
+.card ul li {
+  font-family: "PT Sans", sans-serif;
+  color: #6ab992;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+.card a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #6ab992;
+  font-style: italic;
+}
+
+.card a:hover {
+  color: #082c2c;
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Linking external css -->
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/contact.css" />
+    <!-- Linking Bootstrap Grid System -->
+    <link rel="stylesheet" href="../styles/bootstrap-grid.min.css" />
+    <!-- Importing google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kufam:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Adding favicon -->
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/ios-filled/50/000000/v-symbol.png"
+      type="image/x-icon"
+    />
+    <title>Contact us</title>
+
+    <!-- Embeding Main Javascript -->
+    <script src="../js/main.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <!-- Nav bar / menu bar -->
+      <header class="row">
+        <div class="nav-head col-12">
+          <div class="logo-and-hamburger-container col-12">
+            <div class="logo-container">
+              <a href="../index.html" class="logo-link"
+                ><img
+                  class="logo"
+                  src="https://i.pinimg.com/originals/84/0e/95/840e95c91411fa024b9e1338c45dcf7b.png"
+                  alt="logo"
+                />
+                <h4 class="logo-head">VIHAR VALLEY</h4>
+              </a>
+            </div>
+            <div class="hamburgerIcon">
+              <span id="openNavIcon" onclick="openNav()">&#9776;</span>
+            </div>
+          </div>
+          <nav id="navigationContainer">
+            <div class="closeNavIcon">
+              <span onclick="closeNav()">&times;</span>
+            </div>
+            <ul class="nav-item">
+              <a class="nav-link" href="../index.html"
+                ><li class="nav-unit">HOME</li></a
+              >
+              <a class="nav-link" href="../html/gallery.html"
+                ><li class="nav-unit">GALLERY</li></a
+              >
+              <a class="nav-link" href="../html/membership.html"
+                ><li class="nav-unit">MEMBERSHIP</li></a
+              >
+              <a class="nav-link" href="../html/contact.html"
+                ><li class="nav-unit">CONTACT US</li></a
+              >
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- Main content section -->
+      <main class="row">
+        <div class="col-12">
+          <h1 class="sub-head">Contact Form</h1>
+
+          <div class="contact-container">
+            <form class="col-12 col-sm-10 col-md-8 col-lg-6">
+              <label for="fname">First Name</label>
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Your name"
+                class="col-12"
+                required
+              />
+
+              <label for="lname">Last Name</label>
+              <input
+                type="text"
+                id="lname"
+                name="lastname"
+                placeholder="Your last name"
+                class="col-12"
+                required
+              />
+              <label for="lname">Membership ID</label>
+              <input
+                type="text"
+                id="mid"
+                name="mid"
+                class="col-12"
+                placeholder="Membership ID if there"
+              />
+
+              <label for="subject">Subject</label>
+              <textarea
+                id="subject"
+                name="subject"
+                placeholder="Write something"
+                style="height: 200px"
+                class="col-12"
+                required
+              ></textarea>
+
+              <div class="btn">
+                <a href="../html/disclaimer.html"
+                  ><button class="btn-enq">SUBMIT</button></a
+                >
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer section with address, office time, socail media
+  links and copyright credits-->
+      <footer class="row justify-content-center">
+        <div class="footer-block col-lg-10">
+          <div class="info-block row">
+            <div class="address col-12 col-md">
+              <h4>ADDRESS</h4>
+              <address>
+                Akshya Nagar 1st Block 1st Cross,<br />
+                HSR Layout, Bangalore-560016<br />Tel: +91(702)-01-2030
+              </address>
+            </div>
+            <div class="office-time col-12 col-md">
+              <h4>OFFICE TIME</h4>
+              <p>Monday to Saturday<br />10:00am | 6:00pm</p>
+            </div>
+            <div class="follow col-12 col-md">
+              <h4>FOLLOW US</h4>
+              <p>
+                <a
+                  class="social-link"
+                  href="https://www.facebook.com/FacebookIndia"
+                  >Facebook</a
+                >
+              </p>
+              <p>
+                <a
+                  class="social-link"
+                  href="https://www.instagram.com/instagram"
+                  >Instagram</a
+                >
+              </p>
+              <p>
+                <a class="social-link" href="https://twitter.com/twitter"
+                  >Twitter</a
+                >
+              </p>
+            </div>
+          </div>
+          <div class="col-12">
+            <p class="credits">
+              Demo Website.&copy2020.Designed by
+              <a href="https://www.linkedin.com/in/darshanr27">Darshan R</a>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
