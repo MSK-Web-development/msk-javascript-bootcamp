@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tic Tac Toe</title>
+
+	<meta name="title" property="og:title" content="Tic-Tac-Toe">
+	<meta name="image" property="og:image" content="https://tictactoejs-dev.netlify.app/assets/preview.png">
+	<meta name="url" property="og:url" content="https://tictactoejs-dev.netlify.app">
+	<meta name="description" property="og:description"
+		content="Tic-Tac-Toe - A single & multi player game and can be played in dark and light modes made with html, css and javascript!">
+	<meta name="author" content="Hari Kotha">
+
+	<!-- meta tags for twitter card preview -->
+	<meta name="twitter:title" content="Tic-Tac-Toe">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://tictactoejs-dev.netlify.app/assets/preview.png">
+
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="index.css" >
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<nav class="navbar">
+				<h2 class="title">TIC-TAC-TOE</h2>
+				<div class="theme-toggler">
+					<button id="theme-check">Light</button>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	<section class="choose-game-container">
+		<div class="select-game-text">
+			<h4>Choose game type: </h4>
+		</div>
+		<select id="choose-game">
+			<option value="1">1 Player</option>
+			<option value="2">2 Players</option>
+		</select>
+	</section>
+
+	<section class="game-container">
+		<div class="container">
+			<div class="game">
+				<div class="box box-0"></div>
+				<div class="box box-1"></div>
+				<div class="box box-2"></div>
+				<div class="box box-3"></div>
+				<div class="box box-4"></div>
+				<div class="box box-5"></div>
+				<div class="box box-6"></div>
+				<div class="box box-7"></div>
+				<div class="box box-8"></div>
+			</div>
+			<div class="game-over">
+				<p class="result"></p>
+				<button class="play-again">Play Again</button>
+			</div>
+		</div>
+
+	</section>
+
+	<script src="src/game.js"></script>
+	<script src="src/UI.js"></script>
+	<script src="src/app.js"></script>
+</body>
+
+</html>
