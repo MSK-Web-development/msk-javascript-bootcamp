@@ -1,0 +1,56 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.img img{
+    height: 100%;
+    width: 100%; 
+}
+.navbar{
+    padding: 1rem;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex h2{
+    font-family: 'Grandstander', cursive;
+}
+#heading3{
+    font-family: 'Grandstander', cursive;
+    font-size: 1.5rem;
+    color: rgb(241, 61, 61);
+}
+tr,th,td{
+    text-align: center;
+    justify-content: center;
+}
+.country:hover{
+    cursor: pointer;
+}
+.footer{
+    margin-top: 2rem;
+    background-color:rgba(164, 201, 235, 0.589);
+}
+@media only screen and (max-width: 800px) {
+    .change{
+        font-size: 25px;
+    }
+    .change img{
+        width: 15%;
+    }
+    
+  }
+@media only screen and (max-width: 600px) {
+    .change{
+        font-size: 20px;
+    }
+    .change img{
+        width: 10%;
+    }
+    .img img{
+        width: 130%;
+    }
+  }
