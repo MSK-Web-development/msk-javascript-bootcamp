@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form name="myForm">
+		Enter cookie info : <input type="text" name="name" />
+		<input type="button" value="submit" onclick="clicked()" />
+	</form>
+
+	<script>
+		function clicked() {
+			console.log('Button clicked');
+			let val = document.myForm.name.value;
+
+			// to add item
+			localStorage.setItem('user', val);      // go to inspect -> application -> localStorage
+
+			// to delete
+			localStorage.removeItem('user');
+
+			// to get item
+			var temp = localStorage.getItem('user');
+			console.log(temp);
+
+			// clear all local storage
+			localStorage.clear();
+		}
+	</script>
+</body>
+</html>
