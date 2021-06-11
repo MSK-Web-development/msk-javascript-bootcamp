@@ -10,7 +10,8 @@
 
 👉[Project Link](https://jyotikumari2.github.io/Guess-a-Number/)
 
-![](screenshots/Screenshot2.png)
+ 
+![Guess My Number! - Google Chrome 11-06-2021 20_20_59](https://user-images.githubusercontent.com/65807708/121706072-e8b4ee00-caf2-11eb-9843-dd1551e49598.png)
 
 <p>Implemented HTML,CSS,JAVASCRIPT </p>
 <p> A basic javascript project for beginners.</p>
