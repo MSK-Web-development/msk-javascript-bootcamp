@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+body{
+    background: #195cda;
+
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+section h2{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    line-height: 100vh;
+    font-size: 10vh;
+    color: #ffff;
+    font-weight: 700;
+}
+.banner{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.banner .blocks{
+    position: relative;
+    display: block;
+    width: 5vw;
+    height: 5vh;
+    background: #ffff;
+    animation: animate 2s ease-in-out forwards;
+    animation-delay: 1s;    
+}
+@keyframes animate {
+    0%{
+        transform: translateZ(2000px);
+        background: url(bg.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+    100%{
+        transform: translateZ(0px);
+        background: url(bg.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        border: 1px solid rgba(0,0,0,1);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+    
+}
+section.active .banner .blocks{
+
+ 
+    animation: animateTwo 2s ease-in-out forwards;
+    background: url(bg.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    border: 1px solid rgba(0,0,0,1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+
+}
+@keyframes animateTwo {
+    0%{
+        transform: translateZ(0px);
+        background: url(bg.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+    100%{
+        transform: translateZ(2000px);
+        background: url(bg.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+        border: 1px solid rgba(0,0,0,1);
+        box-shadow: 0 5px 15px rgba(0,0,0,0);
+    }
+    
+}
