@@ -10,7 +10,7 @@
 
 👉[Project Link](https://jyotikumari2.github.io/Guess-a-Number/)
 
-<img src="screeshots/Screenshot2.png">
+![](screenshots/Screenshot2.png)
 
 <p>Implemented HTML,CSS,JAVASCRIPT </p>
 <p> A basic javascript project for beginners.</p>
