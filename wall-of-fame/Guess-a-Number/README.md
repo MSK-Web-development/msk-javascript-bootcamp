@@ -18,6 +18,6 @@
 <h3> 🤝🏻 &nbsp;Connect with Me </h3>
 
 <p align="center">
-<a href="https://www.linkedin.com/in/jyoti-kumari-34a4a01ab/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Paras%20Pandey-blue?style=flat-square&logo=linkedin"></a>
-<a href="mailto:jyotikm058@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-pparas923@gmail.com-blue?style=flat-square&logo=gmail"></a>
+<a href="https://www.linkedin.com/in/jyoti-kumari-34a4a01ab/"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Jyoti%20Kumari-blue?style=flat-square&logo=linkedin"></a>
+<a href="mailto:jyotikm058@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-jyotikm058@gmail.com-blue?style=flat-square&logo=gmail"></a>
 </p>
