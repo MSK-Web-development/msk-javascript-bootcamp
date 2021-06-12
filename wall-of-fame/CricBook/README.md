@@ -50,7 +50,7 @@ Project repository : [mochatek/CricBook](https://github.com/mochatek/CricBook)
       <img src="https://img.icons8.com/color/36/000000/yahoo-mail-app.png" alt="Yahoo!" />
   </a>
   
-  <a href="mailto:akashsabu@ymail.com" target="blank">
+  <a href="https://github.com/mochatek" target="blank">
       <img src="https://img.icons8.com/fluent/36/000000/github.png" alt="GitHub" />
   </a>
 </p>
