@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="CricBook">
+    <meta property="og:description" content="Build realtime cricket scoreboards for FREE!">
+    <meta property="og:image" content="favicon.ico">
+
+    <title>CricBook</title>
+
+    <link rel="icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="res/style.css">
+</head>
+<body>
+    <div id="header" class="container-fluid bg-dark text-center">
+        <img src="res/img/title.png" alt="">
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="question"></h5>
+            </div>
+            <div class="modal-body" id="selections">
+            </div>
+            <div class="text-center py-3">
+            <button type="button" id="confirm" class="btn btn-success">Confirm</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div id="matchDetails" class="pt-3 pb-2">
+        <div class="row center">
+            <div class="input-group mb-3">
+                <input type="text" id="personName" placeholder="Player Name" class="form-control">
+                <div class="input-group-append">
+                    <span class="input-group-text btn btn-primary" onclick="addPerson()">Add</span>
+                </div>
+            </div>
+            <p class="alert alert-secondary small text-center p-0">🛈 Drag and drop players between teams</p>
+        </div>
+
+        <div class="row center">
+            <div class="col-sm-6 team select" style="background-image: url('res/img/teamA.png'); background-size: 40%;" id="teamA" ondrop="drop(event)" ondragover="allowDrop(event)" onclick="selectTeam(this)"></div>
+            <div class="col-sm-6 team" id="teamB" style="background-image: url('res/img/teamB.png'); background-size: 40%;" ondrop="drop(event)" ondragover="allowDrop(event)" onclick="selectTeam(this)"></div>
+        </div>
+
+        <div class="row center text-center mt-2">
+            <label for="totalOvers" class="form-label"><span class="badge bg-primary">Total Overs: <span id="overs">4</span></span></label>
+            <input type="range" name="totalOvers" id="totalOvers" class="form-range" min="1" max="100" value="4" onchange="setTotalOvers(this.value)">
+        </div>
+
+        <div class="text-center p-2 my-2">
+            <button class="btn btn-secondary" onclick="toss('teamA')">🏏 Team A</button>
+            <button class="btn btn-success" onclick="toss()">Toss</button>
+            <button class="btn btn-secondary" onclick="toss('teamB')">🏏 Team B</button>
+        </div>
+
+    </div>
+
+    <div id="scoreboard" class="row center">
+    </div>
+
+    <div id="events" class="container center" style="display: none;">
+        <div class="row">
+            <div class="col-sm">
+                <div class="row text-center mb-2 flex-wrap" style="font-family: monospace;" onclick="sendEvent(event)">
+                    <div class="col-4 py-1 border btn btn-primary" data-event="0">0</div>
+                    <div class="col-4 py-1 border btn btn-primary" data-event="1">1</div>
+                    <div class="col-4 py-1 border btn btn-primary" data-event="2">2</div>
+
+                    <div class="col-4 py-1 border btn btn-primary" data-event="3">3</div>
+                    <div class="col-4 py-1 border btn btn-primary" data-event="4">4</div>
+                    <div class="col-4 py-1 border btn btn-primary" data-event="6">6</div>
+
+                    <div class="col-4 py-1 border btn btn-dark" data-event="Wd">Wide</div>
+                    <div class="col-4 py-1 border btn btn-dark" data-event="N">No-Ball</div>
+                    <div class="col-4 py-1 border btn btn-danger" data-event="W">Wicket</div>
+
+                    <div class="col-4 py-1 border btn btn-secondary" data-event="Re">Re-Ball</div>
+                    <div class="offset-4 col-4 py-1 border btn btn-success" data-event="Ro">Rotate</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="alert alert-secondary text-center" id="ballHistory">
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="container-fluid bg-dark text-center text-white footer">
+        <p class="py-3">© MochaTek 2021</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="res/index.js"></script>
+</body>
+</html>
