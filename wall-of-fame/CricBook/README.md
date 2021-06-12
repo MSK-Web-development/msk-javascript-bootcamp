@@ -2,7 +2,7 @@
 
 Realtime cricket scoreboard generator built with HTML5, CSS, Vanilla JS and Bootstrap.
 
-Project is live at : [CricBook](https://mochatek.github.io/CricBook/)
+🟢 Project is live at : [CricBook](https://mochatek.github.io/CricBook/)
 
 Project repository : [mochatek/CricBook](https://github.com/mochatek/CricBook)
 
