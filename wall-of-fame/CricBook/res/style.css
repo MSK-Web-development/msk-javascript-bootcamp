@@ -1,0 +1,74 @@
+.center {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.team {
+    min-height: 200px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 1pc;
+}
+
+.select {
+    border: 3px solid rgb(6, 196, 6);
+}
+
+.footer {
+    font-family: monospace;
+    font-size: small;
+}
+
+tr.border-danger, tr.border-warning, tr.border-success {
+    border-bottom-width: 2px;
+}
+
+/* #matchDetails {
+    background: linear-gradient(0deg, rgb(0 0 0) 0%, rgb(17 84 108) 100%);
+} */
+
+#personName {
+    text-align:center;
+    width:80%;
+}
+
+#teamA {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#teamB {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.list-group-item {
+    user-select: none;
+    font-size: large;
+    font-family: monospace;
+}
+
+.list-group input[type="radio"] {
+    display: none;
+}
+
+.list-group input[type="radio"] + .list-group-item {
+    cursor: pointer;
+}
+
+.list-group input[type="radio"] + .list-group-item:before {
+    content: "👉";
+    color: transparent;
+    font-weight: bold;
+    margin-right: 1em;
+}
+
+.list-group input[type="radio"]:checked + .list-group-item {
+    background-color: #bed7ec;
+}
+
+.list-group input[type="radio"]:checked + .list-group-item:before {
+    color: inherit;
+}

@@ -1,0 +1,41 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Neuton", serif;
+  font-size: 20px;
+}
+.navbar {
+  /* background-color: rgb(185, 182, 182); */
+  justify-content: space-between !important;
+  border-bottom: 1px solid whitesmoke;
+}
+.navbar .stuffs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .stuffs .theame button {
+  /* border: none; */
+  outline: none;
+  border: 1px solid whitesmoke;
+  padding: 3px 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+.navbar a {
+  color: black;
+  font-family: "Paytone One", sans-serif;
+  font-size: 1.7rem;
+}
+.card_title {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.card-body .card_titleBox {
+  display: flex !important;
+  justify-content: space-between;
+}
+.card_titleBox .noteTime {
+  font-size: 12px;
+}

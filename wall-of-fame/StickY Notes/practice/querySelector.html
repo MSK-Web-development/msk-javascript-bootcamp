@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap"
+      rel="stylesheet"
+    />
+    <title>Stick It Notes</title>
+  </head>
+  <body>
+    <div id="heading">
+      <h1>Stick It Notes</h1>
+      <p id="rambo">- By A.G.</p>
+    </div>
+    <div id="form">
+      <form id="inputForm">
+        <!-- required: means compulsary input field
+				 autofocus: means cursor will directly load there upon the page loading -->
+        <input
+          type="text"
+          name="title"
+          id="new-note-title-input"
+          class="inputText"
+          placeholder="Title"
+          autocomplete="off"
+          required
+          autofocus
+        />
+        <input
+          type="text"
+          name="content"
+          id="new-note-body-input"
+          class="inputText"
+          placeholder="Content"
+          autocomplete="off"
+          required
+        />
+        <input
+          type="text"
+          name="title"
+          id="new-note-title-input"
+          class="inputText"
+          placeholder="Title"
+          autocomplete="off"
+          required
+          autofocus
+        />
+        <input
+          type="text"
+          name="content"
+          id="new-note-body-input"
+          class="inputText"
+          placeholder="Content"
+          autocomplete="off"
+          required
+        />
+        <button type="submit" class="btn" id="btn">Create Note</button>
+      </form>
+    </div>
+
+    <h3 id="no-notes">No notes found. Add one!</h3>
+
+    <ul id="notes">
+      <li>
+        <a href="#">
+          <h2>Some Note</h2>
+          <button class="delete">X</button>
+          <p>Content of the note</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <h2>Some Note</h2>
+          <button class="delete">X</button>
+          <p>Content of the note</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <h2>Some Note</h2>
+          <button class="delete">X</button>
+          <p>Content of the note</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <h2>Some Note</h2>
+          <button class="delete">X</button>
+          <p>Content of the note</p>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <h2>Some Note</h2>
+          <button class="delete">X</button>
+          <p>Content of the note</p>
+        </a>
+      </li>
+    </ul>
+
+    <script>
+      let temp = document.querySelectorAll(".inputText:nth-child(even)");
+      temp.forEach((node) => (node.style.border = "3px dashed green"));
+      console.log(temp);
+
+      let temp1 = document.querySelector(".inputText");
+      let parent = temp1.parentElement;
+      console.log(temp1);
+      console.log(parent);
+
+      let children = parent.children;
+
+      console.log(children);
+
+      let form = document.querySelector("#form");
+      let prevSibling = form.previousElementSibling;
+      let nextSibling = form.nextElementSibling;
+      console.log(prevSibling.children[0].innerHTML);
+
+      let newH3 = document.createElement("h3");
+      // newH3.id = "no-notes";
+      newH3.style.textAlign = "center";
+      let h3 = document.querySelector("#no-notes");
+      let text = document.createTextNode("new addition");
+      newH3.appendChild(text);
+      let body = document.querySelector("body");
+      body.insertBefore(newH3, h3);
+
+      let btn = document.getElementById("btn");
+      btn.addEventListener("click", () => {
+        alert("button clicked");
+      });
+    </script>
+  </body>
+</html>

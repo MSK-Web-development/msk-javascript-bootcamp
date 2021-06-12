@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css"href="style.css">
+    <title>CSS & Javascript Background Animation </title>
+    </head>
+    <body>
+        <section>
+            <h2>Let's Tweet</h2>
+                <div class="banner">
+                    <div class="blocks"></div>
+                </div>
+        </section>
+        <script>
+        const banner = document.getElementsByClassName('banner')[0];
+        const blocks = document.getElementsByClassName('blocks');
+        for(var i=1;i<400;i++){
+            banner.innerHTML += "<div class='blocks'></div>";
+            const duration = Math.random() * 5 ;
+            blocks[i].style.animationDuration = 2+ duration + 's';
+            blocks[i].style.animationDelay = duration + 's';
+
+        }
+        const section = document.getElementsByClassName('section');
+        setTimeout(function(){
+            section.classList.add('active');
+        },14000);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="button" onclick="demo()" value="Click Me" />
+    <script>
+        function demo() {
+            // alert('alert!');         // ALERT
+
+            // CONFIRM:-
+            // const retVal = confirm("Are you sure?");
+            // if(retVal == true)
+            //     alert('Yes');
+            // else
+            //     alert('No');
+
+            // default value is 25
+            const inputVal = prompt('Enter your age: ', 25);
+            // after the DOM loads completely, document.write erases everything
+            // and then overwrites
+            document.write('You entered: ' + inputVal);
+            
+        }
+    </script>
+</body>
+</html>

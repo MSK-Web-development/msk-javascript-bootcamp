@@ -1,0 +1,35 @@
+body {
+    background-color: #EAF0F1;
+}
+
+#editNav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.card {
+    margin: auto;
+}
+
+.h1,
+h1 {
+    margin: 17px 22px 17px 442px;
+}
+
+.h5,
+h5 {
+    margin: 5px 193px;
+}
+
+element.style {
+    width: 502px;
+}
+
+body {
+    height: 1000px;
+}
+
+.card-title {
+    margin: auto;
+}
