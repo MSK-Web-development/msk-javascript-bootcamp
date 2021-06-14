@@ -35,7 +35,7 @@ First, you can try to press <kbd>Shift+Enter</kbd> to input multiple lines, and 
 ```
 It works in most browsers, namely Firefox and Chrome.
 
-If it doesn’t, e.g. in an old browser, there’s an ugly, but reliable way to ensure use strict. Put it inside this kind of wrapper:
+If it doesn’t, e.g. in an old browser, there’s an ugly, but reliable way to ensure use strict. Put it inside this IIFE(Immediately Invoked Function Expression):
 ```
 (function() {
   'use strict';
