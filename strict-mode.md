@@ -44,6 +44,91 @@ If it doesn’t, e.g. in an old browser, there’s an ugly, but reliable way to 
 })()
 ```
 
+### Example
+
+#### Demonstration of IIFE without <code>"use strict";</code>:
+
+```
+(function() { // begin IIFE  
+
+  // first function: no parameters, no return value
+  var hello = function() {
+    alert("Hello, SLO. Let's calculate a rectangle");
+  };
+
+  // second function: one parameter, with return value
+  var getNumber = function(instructions) {
+    number = +prompt(instructions); 
+    /*
+       Here number is used without declation which should give an error but it wouldn't as this 
+       IIFE doesn't use any "use strict" directive
+    */
+    if (isNaN(number)) {
+      return 0;
+    }
+    return number;
+  };
+
+  // third function: two parameters, no return value
+  var rectangleArea = function(x, y) {
+    var area = x * y;
+    alert("The area is " + area);
+  };
+
+  // main function
+  var main = function() {
+    hello();
+    var width = getNumber("Enter width");
+    var length = getNumber("Enter length");
+    rectangleArea(width, length);
+  };
+
+  main();
+})(); // end IIFE
+```
+<hr>
+
+#### Demonstration of IIFE with <code>"use strict";</code>:
+```
+(function() { // begin IIFE  
+  "use strict"; // use strict directive
+  // first function: no parameters, no return value
+  var hello = function() {
+    alert("Hello, SLO. Let's calculate a rectangle");
+  };
+
+  // second function: one parameter, with return value
+  var getNumber = function(instructions) {
+    number = +prompt(instructions); 
+    /*
+       Here number is used without declation which will give an error as this IIFE use 
+       "use strict" directive
+    */
+    if (isNaN(number)) {
+      return 0;
+    }
+    return number;
+  };
+
+  // third function: two parameters, no return value
+  var rectangleArea = function(x, y) {
+    var area = x * y;
+    alert("The area is " + area);
+  };
+
+  // main function
+  var main = function() {
+    hello();
+    var width = getNumber("Enter width");
+    var length = getNumber("Enter length");
+    rectangleArea(width, length);
+  };
+
+  main();
+})(); // end IIFE
+
+```
+
 ## Should we "use strict"?
 The question may sound obvious, but it’s not so.
 
