@@ -1,0 +1,3 @@
+[submodule "wall-of-fame/16x16vision"]
+	path = wall-of-fame/16x16vision
+	url = https://github.com/mac-deep/16x16vision.git
