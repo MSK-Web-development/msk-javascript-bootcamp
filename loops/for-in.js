@@ -18,3 +18,6 @@ Example:-
   
   for (let index in colors)
     console.log(index)
+
+
+/* Mostly for-in loop is used to iterate properties of an **Object** */
