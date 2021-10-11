@@ -9,3 +9,4 @@ Example:-
   for (let color of colors)
     console.log(color)
 
+/* Mostly for-of loop is used to iterate over the elements or items in an **array** */
