@@ -1,0 +1,182 @@
+
+  body {
+    width: 1600px;
+  }
+
+  .header {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  label{
+    font-size: 16px;
+  }
+
+  p,h3{
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    margin: 0.8%;
+  }
+
+  input[type=number] {
+    width: 15%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .data-container,.searchSection,.resultStyle,.warningStyle{
+    height: 300px;
+    position: relative;
+    margin-left: 10%;
+  }
+
+  /* .data-container{
+    overflow-x: scroll;
+  } */
+
+  .warningStyle{
+    height: 40px;
+    font-family: 'Poppins', sans-serif;;
+  }
+
+  .searchSection{
+    /* padding-top: 2%; */
+    height: 90px;
+    font-family: 'Poppins', sans-serif;;
+  }
+  
+  .block{
+    /* width: 18px; */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: #58b7ff;
+    transition: 0.2s all ease;
+  }
+  
+  .block__id {
+    position: absolute;
+    top: -24px;
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+    /* transform: rotate(-90deg); */
+  }
+  
+  #toolbar {
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+
+#generateArray {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;;
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 15px;
+}
+
+.separator {
+  height: 55px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+#arraySize {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+#changeSize {
+  outline: none;
+  margin-right: 15px;
+  height: 15px;
+  -webkit-appearance: none;
+}
+
+#changeSize::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  background:red;
+  cursor: pointer;
+}
+
+#sortSpeed {
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;;
+  display: inline-block;
+  margin-left: 125px;
+}
+
+#changeSpeed {
+  outline: none;
+  margin-right: 15px;
+  height: 15px;
+  background-color: black;
+  -webkit-appearance: none;
+}
+
+#changeSpeed::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  background:red;
+  cursor: pointer;
+}
+
+input[type=range] {
+  border: 1px solid white;
+  width: 100px;
+}
+
+.algorithmButton {
+  color: white;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.highlight{
+  color: red;
+}
+
+input.radio { 
+  display: inline; 
+}
+
+.disableClick {
+  pointer-events:none;
+  cursor: not-allowed;
+}
+
+input[type=button] {
+  width: 25%;
+  float: right;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  font-family: 'Poppins', sans-serif;;
+  margin: 8px 0;
+  margin-right: 15%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 4px 4px 3px grey;
+}
