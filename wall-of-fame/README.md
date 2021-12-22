@@ -33,5 +33,5 @@ Example
 
 ---
 
-[© MSK Web development](http://manojsatishkumar.com/)
+[© MSK Web development](https://www.mskwebdevelopment.com/)
 
