@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+    <title>Algorithm Visualizer</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="src/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="toolbar">
+        <div id="generateArray" style="color: white; cursor: pointer;" onclick="location.reload()" title="Reload Or Stop Simulation">
+            <img alt="algoicon" style="height: 60px;width: 60px;" src="assets/algorithm.png" />
+              <span> ALGORITHM VISUALIZER<span>
+        </div>
+        <div class="separator"></div>
+        <div id="arraySize" style="color: white;">Change Array Size and Speed </div>
+        <input type="range" min="10" max="500" id="changeSize" value="30" style="background: white; cursor: pointer;">
+        <div class="separator"></div>
+        <div class="algorithmButton" onclick="bubbleSort(10);">Bubble</div>
+        <div class="algorithmButton" onclick="selectionSort(10);">Selection</div>
+        <div class="algorithmButton" onclick="quickSort(10);">Quick</div>
+        <div class="algorithmButton" onclick="insertionSort(10);">Insertion</div>
+        <div class="algorithmButton" onclick="cocktailSort(10);">Cocktail</div>
+        <div class="algorithmButton" onclick="linearSearch(searchInputValue)">Linear Search</div>
+        <div class="algorithmButton" onclick="binarySearch(searchInputValue)">Binary Search</div>
+    </div>
+    <section class="searchSection">
+        <form>
+            <label for="search">Searching For:</label>
+            <input type="number" id="search" name="search" placeholder="Enter a number...">
+            <div id="sortSpeed">Sorting Speed </div>
+            <input type="range" min="1" max="10" id="changeSpeed" value="10" style=" cursor: pointer;">
+            <input type="button" id="genBlocks" title="To start afresh" onclick="generateBlockUtil()" value="Generate Random Array with same size">
+        </form>
+    </section>
+    <section id="warning" class="warningStyle"></section>
+    <section class="data-container"></section>
+    <section id="result" class="resultStyle"></section>
+</body>
+<script src="src/quicksort.js"></script>
+<script src="src/cocktailsort.js"></script>
+<script src="src/insertionsort.js"></script>
+<script src="src/sliderEvent.js"></script>
+<script src="src/bubblesort.js"></script>
+<script src="src/selectionsort.js"></script>
+<script src="src/searching.js"></script>
+<script src="src/utilityFunctions.js"></script>
+</html>
