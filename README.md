@@ -1,4 +1,4 @@
-## Click [here](https://youtu.be/kmP4z1LJEKs) to watch the Bootcamp video.
+## Click [here](https://www.mskwebdevelopment.com/javascript-bootcamp) to start the Bootcamp.
 ---
 In this 6.5 hours long Javascript Bootcamp, I will train you with the most important javascript concepts so that you can start building websites and prepare for your upcoming front-end interviews.
 
