@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4d3596d74e.js" crossorigin="anonymous"></script>
+    <script src = "script.js" defer ></script>
+    <title>Canvas Draw</title>
+</head>
+<body>
+    <div id="head"><header>Sketch Board</header></div>
+    <canvas id = "canvas" height="400px" width="600px"></canvas>
+    <div class="toolbox">
+
+      <button id = "increase">+</button>
+      <span id = size>5</span>
+      <button id = "decrease">-</button>
+      <br>
+      <input type="color" class ="selected" id ="color" />
+
+      <button class ="eraser" id= "eraser"> <i class="fas fa-eraser"></i> </button>
+      <button id='clear' type="reset"><i class="fas fa-broom"></i> </button>
+
+    </div>
+
+    <div class = "toolbox2">
+      <button id='save'><i class="fas fa-download"></i></button>
+    </div>  
+</body>
+</html>
