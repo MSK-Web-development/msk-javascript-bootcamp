@@ -24,5 +24,5 @@ Subscribe to our [youtube channel](https://www.youtube.com/channel/UC1pwTpxZ3s1X
 
 ---
 
-[© MSK Web development](http://manojsatishkumar.com/)
+[© MSK Web development](https://www.mskwebdevelopment.com/)
 
