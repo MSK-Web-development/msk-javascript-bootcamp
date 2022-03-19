@@ -16,7 +16,7 @@ new String("value").valueOf();
 "string".lastIndexOf(character);
 "string".match(regEx);
 "string".repeat(times);
-"string".replace("subStr1", "subStr1");
+"string".replace("subStr1", "subStr2");
 "string".search("subStr");
 "string".split(character);
 "string".subStr(startIndex, length);

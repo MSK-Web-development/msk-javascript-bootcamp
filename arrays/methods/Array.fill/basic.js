@@ -3,7 +3,7 @@
  ******************/
 
 /**** Syntax *****
- array.fill(value, start, end);
+ array.fill(value, start, end-1);
 ******************/
 
 const fruits = ["apple", "banana", "orange", "grape", "mango"];

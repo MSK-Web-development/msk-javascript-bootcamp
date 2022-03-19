@@ -10,7 +10,6 @@ import { foo, bar } from '/modules/my-module.js';
 // Import an export with a more convenient alias
 import {
   reallyReallyLongModuleExportName as shortName,
-  anotherLongModuleName as short
 } from '/modules/my-module.js';
 
 // Import a module for its side effects only
@@ -18,10 +17,10 @@ import {
 import '/modules/my-module.js';
 
 
-// Dynamic import
+// Dynamic import 
 (async () => {
   if (somethingIsTrue) {
-    await import('/modules/my-module.js');
+    await import('/modules/my-module.js'); // Returns a promise
   }
 })();
 

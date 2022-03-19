@@ -1,5 +1,4 @@
-// The every() method tests whether all elements in the array pass the test implemented
-// by the provided function
+// The every() method tests whether all elements in the array pass the test implemented by the provided function
 
 // Note: For an empty array, result is true
 // Note: Iteration stops immediately after a falsy return expression ( with or w/o array modification )

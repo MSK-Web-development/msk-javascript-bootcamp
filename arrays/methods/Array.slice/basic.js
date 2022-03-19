@@ -7,7 +7,7 @@ end - last index till where array needs to be sliced (doesn't include the last i
 
 Syntax :
 
-let newArray = arr.slice(start, end)
+let newArray = arr.slice(start, end-1) 
 
 **/
 
