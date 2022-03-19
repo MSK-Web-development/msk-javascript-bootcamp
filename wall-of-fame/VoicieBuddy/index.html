@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoicieBuddy | Text To Speech Converter</title>
+
+    <meta name="keywords" content="HTML CSS SCSS JS">
+    <meta name="description" content="Convert your text to voice">
+    <meta name="title" content="The VoiceBuddy">
+
+
+    <!-- Style CSS  -->
+    <link rel="stylesheet" href="./style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="header">
+            <a href="./index1.html" class="header__icon" translate="no">VoicieBuddy
+            </a>
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__items"><a href="./index1.html" class="navigation__links"> Home</a></li>
+                    <!-- <li class="navigation__items"><a href="./index.html" class="navigation__links">Text to Speech</a> -->
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="voicebuddy__blur"></div>
+    <div class="voicebuddy">
+
+        <div class="voicebuddy__above">
+            <div class="voicebuddy__left">
+                <div class="voicebuddy__option">
+                    <h3 class="voicebuddy__voice">Select Language:</h3>
+                    <select class="voicebuddy__options" name="voice" id="voices">
+                        <option value="">Select a Voice</option>
+                    </select>
+                </div>
+                <div class="voicebuddy__choose">
+                    <div class="voicebuddy__top">
+                        <label class="voicebuddy__label" for="rate">Rate:</label>
+                        <input class="voicebuddy__input" name="rate" type="range" min="0" max="2" value="1" step="0.1">
+                    </div>
+                    <div class="voicebuddy__top">
+                        <label class="voicebuddy__label" for="pitch">Pitch:</label>
+                        <input class="voicebuddy__input" name="pitch" type="range" min="0" max="1.5" value="0.5"
+                            step="0.1">
+                    </div>
+                </div>
+            </div>
+
+            <div class="voicebuddy__right">
+                <textarea wrap="on" class="voicebuddy__textarea" name="text"
+                    placeholder="Enter the text to listen"></textarea>
+
+            </div>
+        </div>
+        <div class="voicebuddy__below">
+            <div class="voicebuddy__btn btn">
+                <button class="voicebuddy__btn btn__stop" id="stop">Stop!</button>
+                <button class="voicebuddy__btn btn__start" id="speak">Speak</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+
+</html>

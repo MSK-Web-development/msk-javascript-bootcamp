@@ -1,12 +1,8 @@
-## Click [here](https://youtu.be/kmP4z1LJEKs) to watch the Bootcamp video.
+## Click [here](https://www.mskwebdevelopment.com/javascript-bootcamp) to start the Bootcamp.
 ---
-In this 6.5 hours long Javascript Bootcamp, I will train you with the most important javascript concepts so that you can start building websites and prepare for your upcoming front-end interviews.
+In this Javascript Bootcamp, I will train you with the most important javascript concepts so that you can start building websites and prepare for your upcoming front-end interviews.
 
 I will try to explain things in a simple but effective way to make you understand and remember these concepts.
-
-The video has been tagged with chapters ( timestamps ) if you want to jump to different sections.
-
-Subscribe to our [youtube channel](https://www.youtube.com/channel/UC1pwTpxZ3s1X_Vxb8K2uWYw) if you haven't already.
 
 ---
 
@@ -24,5 +20,5 @@ Subscribe to our [youtube channel](https://www.youtube.com/channel/UC1pwTpxZ3s1X
 
 ---
 
-[© MSK Web development](http://manojsatishkumar.com/)
+[© MSK Web development](https://www.mskwebdevelopment.com/)
 
