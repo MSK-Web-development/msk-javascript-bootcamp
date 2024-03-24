@@ -16,10 +16,10 @@ array.includes(item);
 array.reduce((total, value) => total + value);
 
 let array2 = Array.from(array1);
-let newArray = Array.of(v1, _v2, _v3, _v4, etc);
+let newArray1 = Array.of(v1, _v2, _v3, _v4, etc);
 
 let sliecdArray = arr.slice(start, end-1); // No mutation
 let arrDeletedItems = arr.splice(start, deleteCount, item1, etc); // mutation
 
-let newArray = array1.concat(array2);
-let newArray = array.map(Fn);
+let newArray2 = array1.concat(array2);
+let newArray3 = array.map(Fn);
