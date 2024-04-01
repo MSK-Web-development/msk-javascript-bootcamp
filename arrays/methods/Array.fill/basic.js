@@ -1,3 +1,22 @@
+/***********************************************************
+MAIN DEFINITION
+
+
+***********************************************************
+BASIC SYNTAX:
+
+
+
+PARAMS:
+
+RETURN VALUE:
+  
+***********************************************************
+  
+Notes: 
+  1.
+***********************************************************/
+
 /**** Definition ****
  Fills the array with specified value
  ******************/
@@ -12,12 +31,11 @@ const fruits = ["apple", "banana", "orange", "grape", "mango"];
 fruits.fill("nuts", 1, 3); // [ 'apple', 'nuts', 'nuts', 'grape', 'mango' ]
 
 // Override #2
-fruits.fill("nuts", 1)  // [ 'apple', 'nuts', 'nuts', 'nuts', 'nuts' ]
+fruits.fill("nuts", 1); // [ 'apple', 'nuts', 'nuts', 'nuts', 'nuts' ]
 
 // Override #3
-fruits.fill("nuts")  // [ 'nuts', 'nuts', 'nuts', 'nuts', 'nuts' ]
+fruits.fill("nuts"); // [ 'nuts', 'nuts', 'nuts', 'nuts', 'nuts' ]
 
-const arr = Array(6).fill("1") // ["1","1","1","1","1","1"]
+const arr = Array(6).fill("1"); // ["1","1","1","1","1","1"]
 
 console.log(fruits);
-
