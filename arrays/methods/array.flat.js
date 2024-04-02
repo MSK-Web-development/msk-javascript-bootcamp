@@ -1,3 +1,18 @@
+/*
+This method flattens 1 level depth and returns a new array.
+
+SYNTAX:
+array.flat();
+*/
+
+const num = [1, 2, [3, 4], [5, 6, 7, [8, 9]]];
+
+let result = num.flat();
+console.log(result);
+//Output: [ 1, 2, 3, 4, 5, 6, 7, [ 8, 9 ] ]
+
+/**********************************************/
+// Example - How to flatten a nested array ?
 var inputArray = [1, 2, [3, 4, [5, 6]], 9];
 
 // //* Method 1
