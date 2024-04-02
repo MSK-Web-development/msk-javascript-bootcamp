@@ -1,29 +1,12 @@
 /***********************************************************
 MAIN DEFINITION
 
-
+Fills the array with specified value
 ***********************************************************
 BASIC SYNTAX:
 
-
-
-PARAMS:
-
-RETURN VALUE:
-  
-***********************************************************
-  
-Notes: 
-  1.
+array.fill(value, start, end-1);
 ***********************************************************/
-
-/**** Definition ****
- Fills the array with specified value
- ******************/
-
-/**** Syntax *****
- array.fill(value, start, end-1);
-******************/
 
 const fruits = ["apple", "banana", "orange", "grape", "mango"];
 
@@ -38,4 +21,6 @@ fruits.fill("nuts"); // [ 'nuts', 'nuts', 'nuts', 'nuts', 'nuts' ]
 
 const arr = Array(6).fill("1"); // ["1","1","1","1","1","1"]
 
-console.log(fruits);
+// Scenario: Create an object with empty array
+console.log([].fill.call({ length: 4 }, "nuts"));
+// { '0': 'nuts', '1': 'nuts', '2': 'nuts', '3': 'nuts', length: 4 }
