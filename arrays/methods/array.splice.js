@@ -1,13 +1,22 @@
 /*
+MAIN DEFINITION:
+
 The splice() method changes the contents of an array by removing or replacing existing
 elements and/or adding new elements
 
 The original array gets mutated with remaining items after deletion
 
-Syntax :
+********************************************************
+BASIC SYNTAX :
 
-let arrDeletedItems = arr.splice(start, deleteCount, item1, item2, ...)
+array.splice(start, deleteCount, item1, item2, ...)
 
+PARAMS:
+    - start: The index at which to start modifying the array. If negative, it will begin that many elements from the end of the array.
+    - deleteCount (optional): The number of elements to remove from the array. If omitted or if greater than the number of elements from start to the end of the array, all elements starting from start index to the end of the array will be removed.
+    - item1, item2, ... (optional): Elements to add to the array. If specified, they will be inserted into the array at the specified start index.
+
+********************************************************
 */
 
 // Example 1
