@@ -1,4 +1,4 @@
-## Click [here](https://www.mskwebdevelopment.com/javascript-bootcamp) to start the Bootcamp.
+## Click [here](https://topmate.io/manoj_satishkumar/388909) to start the Bootcamp.
 ---
 In this Javascript Bootcamp, I will train you with the most important javascript concepts so that you can start building websites and prepare for your upcoming front-end interviews.
 
