@@ -1,6 +1,7 @@
 # Root
 node_modules
 .DS_Store
+prompts.md
 
 # Node modules
 react/projects/react-redux/node_modules
