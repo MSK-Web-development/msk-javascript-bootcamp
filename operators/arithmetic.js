@@ -1,5 +1,5 @@
 /*
-? Arithmatic Operators
+? Arithmetic Operators
 
 +	Addition (Also works with strings)
 -	Subtraction
