@@ -7,7 +7,7 @@
     Boolean - represents boolean value either false or true eg var b=true;
     Undefined - represents undefined value
     Null - represents null i.e. no value at all
-    Symbol- Symbols are often used to add unique property keys to an object
+    v- Symbols are often used to add unique property keys to an object
 */
 
 /*

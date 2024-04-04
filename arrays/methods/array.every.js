@@ -24,6 +24,7 @@ Notes:
   2. If any invocation of the callback returns false, the every() method immediately returns false without checking the remaining elements.
   3. For an empty array, the every() method always returns true since there are no elements to test.
 ***********************************************************/
+
 const array = [1, 2, 3, 4, 5];
 const allGreaterThanZero = array.every((element) => element > 0);
 console.log(allGreaterThanZero); // Output: true
