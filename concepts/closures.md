@@ -1,4 +1,4 @@
-## Closures
+# Closures
 
 Closures are a fundamental concept in JavaScript that involve the combination of functions and their lexical environment, enabling functions to retain access to variables from their enclosing scope even after the parent function has finished executing. Let's delve into closures with multiple examples:
 
