@@ -34,5 +34,5 @@ In this Javascript Bootcamp, you will learn the most important javascript concep
 ###### Owner: [Manoj Satishkumar](https://www.linkedin.com/in/manojsatishkumar/)
 ---
 
-[© MSK Web development](https://www.mskwebdevelopment.com/)
+© MSK Web development
 
