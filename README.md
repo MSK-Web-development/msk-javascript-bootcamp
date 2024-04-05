@@ -2,7 +2,7 @@
 
 In this Javascript Bootcamp, you will learn the most important javascript concepts so that you can start building websites and prepare for your upcoming front-end interviews.
 
-![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FMSK-Web-development%2Fmsk-javascript-bootcamp&label=Visitors&labelColor=%23d9e3f0&countColor=%2337d67a)
+[![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FMSK-Web-development%2Fmsk-javascript-bootcamp&label=Visitors&labelColor=%23697689&countColor=%23f1bf5e)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FMSK-Web-development%2Fmsk-javascript-bootcamp)
 
 ## VS code setup
 
@@ -30,5 +30,3 @@ In this Javascript Bootcamp, you will learn the most important javascript concep
 </a>
 
 ###### Owner: [Manoj Satishkumar](https://www.linkedin.com/in/manojsatishkumar/)
-
-© MSK Web development
