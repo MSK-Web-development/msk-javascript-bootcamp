@@ -2,8 +2,6 @@
 
 In this Javascript Bootcamp, you will learn the most important javascript concepts so that you can start building websites and prepare for your upcoming front-end interviews.
 
-[![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FMSK-Web-development%2Fmsk-javascript-bootcamp&label=Visitors&labelColor=%23697689&countColor=%23f1bf5e)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2FMSK-Web-development%2Fmsk-javascript-bootcamp)
-
 ## VS code setup
 
 1. Install [Better comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments) VS Code extension to view colored comments.
