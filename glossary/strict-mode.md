@@ -1,147 +1,82 @@
-# strict mode
-## The modern mode, "use strict"
-For a long time, JavaScript evolved without compatibility issues. New features were added to the language while old functionality didn’t change.
+# Strict mode
 
-That had the benefit of never breaking existing code. But the downside was that any mistake or an imperfect decision made by JavaScript’s creators got stuck in the language forever.
+Strict mode is a feature in JavaScript that allows you to opt into a stricter set of rules and behaviors for your code. It helps catch common coding errors and prevents potentially dangerous behaviors, making your code more robust and secure.
 
-This was the case until 2009 when ECMAScript 5 (ES5) appeared. It added new features to the language and modified some of the existing ones. To keep the old code working, most such modifications are off by default. You need to explicitly enable them with a special directive: <code>"use strict".</code>
+### Overview
 
-## "use strict"
-The directive looks like a string: "use strict" or 'use strict'. When it is located at the top of a script, the whole script works the “modern” way.
+- **Enabling Strict Mode**: You can enable strict mode for an entire script or for individual functions by adding the string `"use strict";` at the beginning of the script or function.
 
-For example: 
-```
+- **Key Features**:
+  1. **Restrictive Syntax**: Strict mode enforces stricter syntax rules, such as disallowing the use of undeclared variables, deprecated features, and unsafe actions.
+  2. **Error Handling**: It throws more errors for common mistakes, such as assigning values to read-only properties, duplicating parameter names, and using reserved keywords as variable names.
+  3. **Performance Optimizations**: Some JavaScript engines can apply optimizations when strict mode is enabled, potentially improving the performance of your code.
+  4. **Security Enhancements**: Strict mode mitigates some security risks by preventing certain actions that could lead to vulnerabilities, such as accessing the global object in unexpected ways.
+
+### Examples
+
+1. **Enabling Strict Mode for an Entire Script**:
+
+```javascript
 "use strict";
 
-// this code works the modern way
-...
+// Strict mode enabled for the entire script
+// Any code below this line will adhere to strict mode rules
 ```
 
-### Note: 
-<code>"use strict"</code> can be put at the beginning of a function. Doing that enables strict mode in that function only. But usually people use it for the whole script.
+2. **Enabling Strict Mode for a Function**:
 
-## Browser Console
-When you use a developer console to run code, please note that it doesn’t <code>use strict</code> by default.
+```javascript
+function strictModeFunction() {
+  "use strict";
 
-Sometimes, when <code>use strict</code> makes a difference, you’ll get incorrect results.
-
-So, how to actually <code>use strict</code> in the console?
-
-First, you can try to press <kbd>Shift+Enter</kbd> to input multiple lines, and put <code>use strict</code> on top, like this:
-```
-'use strict'; <Shift+Enter for a newline>
-//  ...your code
-<Enter to run>
-```
-It works in most browsers, namely Firefox and Chrome.
-
-If it doesn’t, e.g. in an old browser, there’s an ugly, but reliable way to ensure use strict. Put it inside this IIFE(Immediately Invoked Function Expression):
-```
-(function() {
-  'use strict';
-
-  // ...your code here...
-})()
+  // Strict mode enabled for this function only
+}
 ```
 
-### Example
+3. **Error Throwing in Strict Mode**:
 
-#### Demonstration of IIFE without <code>"use strict";</code>:
+```javascript
+"use strict";
 
-```
-(function() { // begin IIFE  
+// Throws an error: Assigning to a read-only property
+const obj = {};
+Object.defineProperty(obj, "x", { value: 42, writable: false });
+obj.x = 50; // TypeError: Cannot assign to read-only property
 
-  // first function: no parameters, no return value
-  var hello = function() {
-    alert("Hello, SLO. Let's calculate a rectangle");
-  };
+// Throws an error: Duplicating parameter names
+function duplicateParams(a, a) {
+  return a + a; // SyntaxError: Duplicate parameter name not allowed in this context
+}
 
-  // second function: one parameter, with return value
-  var getNumber = function(instructions) {
-    number = +prompt(instructions); 
-    /*
-       Here number is used without declation which should give an error but it wouldn't as this 
-       IIFE doesn't use any "use strict" directive
-    */
-    if (isNaN(number)) {
-      return 0;
-    }
-    return number;
-  };
-
-  // third function: two parameters, no return value
-  var rectangleArea = function(x, y) {
-    var area = x * y;
-    alert("The area is " + area);
-  };
-
-  // main function
-  var main = function() {
-    hello();
-    var width = getNumber("Enter width");
-    var length = getNumber("Enter length");
-    rectangleArea(width, length);
-  };
-
-  main();
-})(); // end IIFE
-```
-<hr>
-
-#### Demonstration of IIFE with <code>"use strict";</code>:
-```
-(function() { // begin IIFE  
-  "use strict"; // use strict directive
-  // first function: no parameters, no return value
-  var hello = function() {
-    alert("Hello, SLO. Let's calculate a rectangle");
-  };
-
-  // second function: one parameter, with return value
-  var getNumber = function(instructions) {
-    number = +prompt(instructions); 
-    /*
-       Here number is used without declation which will give an error as this IIFE use 
-       "use strict" directive
-    */
-    if (isNaN(number)) {
-      return 0;
-    }
-    return number;
-  };
-
-  // third function: two parameters, no return value
-  var rectangleArea = function(x, y) {
-    var area = x * y;
-    alert("The area is " + area);
-  };
-
-  // main function
-  var main = function() {
-    hello();
-    var width = getNumber("Enter width");
-    var length = getNumber("Enter length");
-    rectangleArea(width, length);
-  };
-
-  main();
-})(); // end IIFE
-
+duplicateParams(2, 3);
 ```
 
-## Should we "use strict"?
-The question may sound obvious, but it’s not so.
+4. **Preventing Global Object Pollution**:
 
-One could recommend to start scripts with <code>"use strict"</code>… But you know what’s cool?
+```javascript
+"use strict";
 
-Modern JavaScript supports “classes” and “modules” – advanced language structures (we’ll surely get to them), that enable <code>use strict</code> automatically. So we don’t need to add the <code>"use strict"</code> directive, if we use them.
+// Throws an error: Using 'this' in global scope
+function logThis() {
+  console.log(this); // TypeError: 'this' is not defined
+}
 
-<strong>
-So, for now <code>"use strict";</code> is a welcome guest at the top of your scripts. Later, when your code is all in classes and modules, you may omit it.
-</strong>
+logThis();
+```
 
-### Some links for details about <code>"use strict";</code>:
+5. **Eliminating Implicit Global Variables**:
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
+```javascript
+"use strict";
 
-https://www.geeksforgeeks.org/strict-mode-javascript/
+// Throws an error: Accessing undeclared variable
+function strictModeTest() {
+  implicitVar = 10; // ReferenceError: implicitVar is not defined
+}
+
+strictModeTest();
+```
+
+### Conclusion
+
+Strict mode in JavaScript provides developers with a safer and more predictable environment for writing code. By enabling strict mode, you can catch errors early, improve code quality, and enhance the security and performance of your JavaScript applications. It's recommended to use strict mode in all modern JavaScript projects to leverage its benefits and ensure better code consistency and reliability.
