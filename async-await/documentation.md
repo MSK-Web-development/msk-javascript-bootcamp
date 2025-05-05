@@ -1,2 +1,0 @@
-- async functions return implicit proimse
-- They execute via the event loop
